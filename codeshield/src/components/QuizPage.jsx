@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import "./QuizPage.css";
 
 const quizData = {
   1: {
@@ -60,6 +61,76 @@ const quizData = {
         explanation: "Checking mutual connections and verifying external sources reduces risk."
       }
     ]
+  },
+  2: {
+    questions: [
+      {
+        question: "You receive this WhatsApp message:\n\nSalam.. cuba check IC, sbb kerajaan bagi kite bantuan RM300. Cara nak claim duit tu:\nhttps://b4ntuan-my-t3rk1ni-cvc07ru29.vercel.app/\n\nDaulat Tuanku",
+        options: [
+          "It contains a long message in Malay",
+          "It's a legitimate government notice",
+          "It uses a suspicious-looking link and plays on emotions",
+          "It mentions \"Daulat Tuanku\" so it must be real"
+        ],
+        correct: 2,
+        explanation: "This is a phishing scam. It pretends to be from the government, uses emotional triggers like free aid, and includes a suspicious link to steal your information."
+      },
+      {
+        question: "Which of these is a common sign of a phishing message?",
+        options: [
+          "Personalized greeting with your full name",
+          "Asking you to log in through a suspicious link",
+          "Sharing safety tips",
+          "Telling you to update your game"
+        ],
+        correct: 1,
+        explanation: "Phishing messages often trick people into entering their credentials on fake websites via suspicious links."
+      },
+      {
+        question: "Which of these is the best way to protect yourself from phishing scams?",
+        options: [
+          "Use the same password for all your accounts",
+          "Turn off two-factor authentication to avoid delays",
+          "Be careful with links, and enable two-factor authentication",
+          "Click suspicious links only on mobile"
+        ],
+        correct: 2,
+        explanation: "Using 2FA and avoiding suspicious links are two of the best ways to prevent phishing attacks."
+      },
+      {
+        question: "You receive an email that says: \"Your bank account has been frozen. Click here to verify your info now.\"\nThe sender's email is 'support@b4nk-secure-help.com'. What should you do?",
+        options: [
+          "Click the link and log in quickly",
+          "Reply to the email and ask for proof",
+          "Ignore it and log in via the official bank website",
+          "Forward it to your parents"
+        ],
+        correct: 2,
+        explanation: "The sender is not using the real bank domain, which is a red flag. Always visit the official website directly instead of clicking unknown links."
+      },
+      {
+        question: "You receive this email:\n\n\"Dear user,\n\nWe've detected suspicious activity on your account and have temporarily suspended access for your protection.\n\nTo restore your access, please verify your information immediately via this link:\n\nhttps://support.google.com.my/10759436/verify\n\nFailure to act within 24 hours will result in permanent suspension of your account.\n\nThank you for your prompt attention.\n\n— The Security Team\n\nThis is an automated message. Please do not reply.\"\n\nIt's from no-reply@accounts.google.com. What makes this message suspicious?",
+        options: [
+          "It uses a Google domain for the link",
+          "It threatens suspension within 24 hours",
+          "The URL uses an unexpected country subdomain (.com.my) and not the official accounts.google.com domain",
+          "It's sent from no-reply@accounts.google.com"
+        ],
+        correct: 2,
+        explanation: "Official Google security notifications always link to URLs under accounts.google.com without extra country subdomains. The use of \"support.google.com.my\" is a red flag indicating a phishing attempt."
+      },
+      {
+        question: "An 18-year-old Malaysian teen received a call saying the police were after him over an illegal parcel in his name. Over several days, he was told not to contact anyone, paid a total of RM309,000, then his family was asked for ransom. What key warning sign did scammers use to manipulate him?",
+        options: [
+          "They offered a real police phone number for verification",
+          "They instructed him to keep the matter secret and not contact family",
+          "They asked for his social media password to 'verify' his identity",
+          "They provided official government websites for payment"
+        ],
+        correct: 1,
+        explanation: "A common tactic in scams is isolation: urging victims to stay silent and not seek advice, which prevents them from verifying the story or getting help."
+      }
+    ]
   }
 };
 
@@ -73,6 +144,8 @@ function QuizPage() {
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [showEffect, setShowEffect] = useState(false);
 
   if (!moduleId || !quizData[moduleId]) {
     return (
@@ -93,9 +166,18 @@ function QuizPage() {
     setSelectedAnswer(selectedOption);
     setShowExplanation(true);
     
-    if (questions[currentQuestion].correct === selectedOption) {
+    const correct = questions[currentQuestion].correct === selectedOption;
+    setIsCorrect(correct);
+    setShowEffect(true);
+    
+    if (correct) {
       setScore(score + 1);
     }
+
+    // Reset effect after animation
+    setTimeout(() => {
+      setShowEffect(false);
+    }, 1000);
   };
 
   const handleNext = () => {
@@ -108,7 +190,7 @@ function QuizPage() {
       setShowScore(true);
       navigate('/result', {
         state: {
-          score: score + (questions[currentQuestion].correct === selectedAnswer ? 1 : 0),
+          score: score,
           totalQuestions: questions.length,
           moduleId
         }
@@ -129,7 +211,7 @@ function QuizPage() {
         </div>
 
         <div className="question-card">
-          <h3>{questions[currentQuestion].question}</h3>
+          <h3 style={{ whiteSpace: 'pre-line' }}>{questions[currentQuestion].question}</h3>
           
           <div className="options">
             {questions[currentQuestion].options.map((option, index) => (
@@ -140,7 +222,10 @@ function QuizPage() {
                   selectedAnswer === null ? "" :
                   index === questions[currentQuestion].correct ? "correct" :
                   selectedAnswer === index ? "wrong" : ""
-                } ${selectedAnswer !== null ? "disabled" : ""}`}
+                } ${selectedAnswer !== null ? "disabled" : ""} ${
+                  showEffect && selectedAnswer === index ? 
+                  (isCorrect ? "correct-animation" : "wrong-animation") : ""
+                }`}
               >
                 {option}
               </button>
@@ -148,14 +233,30 @@ function QuizPage() {
           </div>
 
           {showExplanation && (
-            <div className="explanation">
-              <p>{questions[currentQuestion].explanation}</p>
+            <div className={`explanation ${showEffect ? (isCorrect ? "correct-explanation" : "wrong-explanation") : ""}`}>
+              <p style={{ whiteSpace: 'pre-line' }}>{questions[currentQuestion].explanation}</p>
               <button onClick={handleNext} className="next-btn">
                 {currentQuestion === questions.length - 1 ? "Finish Quiz" : "Next Question"}
               </button>
             </div>
           )}
         </div>
+
+        {showEffect && isCorrect && (
+          <div className="confetti-container">
+            {Array.from({ length: 50 }).map((_, index) => (
+              <div 
+                key={index} 
+                className="confetti"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  backgroundColor: `hsl(${Math.random() * 360}, 50%, 50%)`
+                }}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -2,20 +2,56 @@ import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const badges = {
-  gold: {
-    name: "Cyber Guardian",
-    icon: "🏆",
-    description: "Master of cybersecurity knowledge!"
+  1: {  // Social Media Safety Module
+    gold: {
+      name: "Social Media Guardian",
+      icon: "🔒",
+      description: "Master of social media safety!"
+    },
+    silver: {
+      name: "Privacy Protector",
+      icon: "🛡️",
+      description: "Strong understanding of online privacy!"
+    },
+    bronze: {
+      name: "Safety Apprentice",
+      icon: "📱",
+      description: "Good start on social media safety!"
+    }
   },
-  silver: {
-    name: "Digital Defender",
-    icon: "🛡️",
-    description: "Strong understanding of security concepts!"
+  2: {  // Phishing Module
+    gold: {
+      name: "Phishing Expert",
+      icon: "🎣",
+      description: "Master at detecting phishing attempts!"
+    },
+    silver: {
+      name: "Scam Detector",
+      icon: "🔍",
+      description: "Good at identifying online scams!"
+    },
+    bronze: {
+      name: "Security Novice",
+      icon: "🌟",
+      description: "Learning to spot online threats!"
+    }
   },
-  bronze: {
-    name: "Security Apprentice",
-    icon: "📚",
-    description: "Good start on your security journey!"
+  3: {  // Digital Defense Module (for future use)
+    gold: {
+      name: "Cyber Warrior",
+      icon: "⚔️",
+      description: "Master of digital defense!"
+    },
+    silver: {
+      name: "Security Sentinel",
+      icon: "🛡️",
+      description: "Strong defender of digital assets!"
+    },
+    bronze: {
+      name: "Defense Initiate",
+      icon: "🎯",
+      description: "Beginning the path of cyber defense!"
+    }
   }
 };
 
@@ -66,9 +102,10 @@ function ResultPage() {
 
   const calculateBadge = (score, total) => {
     const percentage = (score / total) * 100;
-    if (percentage >= 80) return badges.gold;
-    if (percentage >= 60) return badges.silver;
-    return badges.bronze;
+    const moduleBadges = badges[moduleId] || badges[1]; // Default to module 1 badges if moduleId not found
+    if (percentage >= 80) return moduleBadges.gold;
+    if (percentage >= 60) return moduleBadges.silver;
+    return moduleBadges.bronze;
   };
 
   const handleRetry = () => {

@@ -1,0 +1,125 @@
+/* Correct answer animation */
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+/* Wrong answer animation */
+@keyframes wrongShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Confetti animation */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.correct-animation {
+  animation: correctPulse 0.5s ease-in-out !important;
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+.wrong-animation {
+  animation: wrongShake 0.5s ease-in-out !important;
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confettiFall 2s linear forwards;
+}
+
+/* Explanation animations */
+.correct-explanation {
+  animation: slideIn 0.5s ease-out;
+  border-left: 4px solid #28a745;
+}
+
+.wrong-explanation {
+  animation: slideIn 0.5s ease-out;
+  border-left: 4px solid #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced button styles */
+.option-btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn:active {
+  transform: translateY(0);
+}
+
+/* Disabled state */
+.option-btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Correct answer highlight */
+.option-btn.correct {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Wrong answer highlight */
+.option-btn.wrong {
+  background-color: #dc3545;
+  color: white;
+} 

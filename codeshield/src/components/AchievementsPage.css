@@ -1,0 +1,116 @@
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.badge-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.module-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.module-icon {
+  font-size: 1.5rem;
+}
+
+.module-name {
+  margin: 0;
+  color: #64ffda;
+  font-weight: 500;
+}
+
+.badge-description {
+  color: #a8b2d1;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.badge-date {
+  color: #8892b0;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.badge-score {
+  background: rgba(100, 255, 218, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 1rem;
+  color: #64ffda;
+  font-weight: 500;
+}
+
+.no-achievements {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin: 2rem;
+}
+
+.start-btn {
+  background: #64ffda;
+  color: #0a192f;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #4cd8b2;
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
+
+/* Badge name styling */
+.badge-card h3 {
+  color: #e6f1ff;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+} 

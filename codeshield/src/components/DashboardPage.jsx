@@ -11,11 +11,10 @@ const modules = [
   },
   {
     id: 2,
-    title: "Online Privacy",
-    description: "Coming soon: Discover how to protect your personal information online.",
-    icon: "🛡️",
-    difficulty: "Intermediate",
-    comingSoon: true
+    title: "Phishing",
+    description: "Learn to identify and protect yourself from phishing attempts, scams, and social engineering attacks that try to steal your personal information.",
+    icon: "🎣",
+    difficulty: "Intermediate"
   },
   {
     id: 3,

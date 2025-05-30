@@ -1,6 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const moduleInfo = {
+  1: {
+    name: "Social Media Safety",
+    description: "Protecting yourself on social media platforms",
+    icon: "🔒"
+  },
+  2: {
+    name: "Phishing",
+    description: "Identifying and avoiding online scams",
+    icon: "🎣"
+  },
+  3: {
+    name: "Digital Defense",
+    description: "Advanced cybersecurity techniques",
+    icon: "⚔️"
+  }
+};
+
 function AchievementsPage() {
   const navigate = useNavigate();
   const [achievements, setAchievements] = useState([]);
@@ -23,15 +41,6 @@ function AchievementsPage() {
     achievementsData.sort((a, b) => b.completedAt - a.completedAt);
     setAchievements(achievementsData);
   }, []);
-
-  const getModuleName = (moduleId) => {
-    const moduleNames = {
-      'basic-security': 'Basic Cybersecurity',
-      'online-privacy': 'Online Privacy',
-      'digital-defense': 'Digital Defense'
-    };
-    return moduleNames[moduleId] || moduleId;
-  };
 
   const formatDate = (date) => {
     return new Intl.DateTimeFormat('en-US', {
@@ -63,23 +72,32 @@ function AchievementsPage() {
         ) : (
           <div className="badges-showcase">
             <div className="badges-grid">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="badge-card">
-                  <div className="badge-icon-large">
-                    {achievement.badge.icon}
+              {achievements.map((achievement, index) => {
+                const module = moduleInfo[achievement.moduleId];
+                return (
+                  <div key={index} className="badge-card">
+                    <div className="badge-icon-large">
+                      {achievement.badge.icon}
+                    </div>
+                    <h3>{achievement.badge.name}</h3>
+                    <div className="module-info">
+                      <span className="module-icon">{module?.icon}</span>
+                      <p className="module-name">
+                        {module?.name || 'Unknown Module'}
+                      </p>
+                    </div>
+                    <p className="badge-description">
+                      {module?.description}
+                    </p>
+                    <p className="badge-date">
+                      Earned on {formatDate(achievement.completedAt)}
+                    </p>
+                    <div className="badge-score">
+                      Score: {achievement.score}/{achievement.totalQuestions} ({achievement.percentage}%)
+                    </div>
                   </div>
-                  <h3>{achievement.badge.name}</h3>
-                  <p className="module-name">
-                    {getModuleName(achievement.moduleId)}
-                  </p>
-                  <p className="badge-date">
-                    Earned on {formatDate(achievement.completedAt)}
-                  </p>
-                  <div className="badge-score">
-                    Score: {achievement.score}/{achievement.totalQuestions} ({achievement.percentage}%)
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

@@ -1,4 +1,4 @@
-#Basic setup
+# Basic setup
 1. git clone the repo 
 ```cmd
 git clone https://github.com/Kaiyin-412/wic2007-assignment.git

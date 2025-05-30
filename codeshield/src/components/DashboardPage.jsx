@@ -33,7 +33,10 @@ function DashboardPage() {
   const [completedModules, setCompletedModules] = useState([])
 
   useEffect(() => {
-    // Load earned badges from localStorage
+    loadUserProgress();
+  }, [])
+
+  const loadUserProgress = () => {
     const savedBadges = localStorage.getItem('earnedBadges')
     if (savedBadges) {
       const badges = JSON.parse(savedBadges)
@@ -42,14 +45,29 @@ function DashboardPage() {
       const completed = [...new Set(badges.map(badge => badge.moduleId))]
       setCompletedModules(completed)
     }
-  }, [])
+  }
 
   const handleModuleClick = (module) => {
     if (!module.comingSoon) {
+      // Clear previous session data for this module
+      const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}')
+      delete completedModules[module.id]
+      localStorage.setItem('completedModules', JSON.stringify(completedModules))
+
+      // Remove badges for this module
+      const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]')
+      const filteredBadges = earnedBadges.filter(badge => badge.moduleId !== module.id)
+      localStorage.setItem('earnedBadges', JSON.stringify(filteredBadges))
+
+      // Refresh the display
+      loadUserProgress()
+
+      // Navigate to quiz
       navigate('/quiz', { 
         state: { 
           moduleId: module.id,
-          moduleTitle: module.title
+          moduleTitle: module.title,
+          isRetake: completedModules.includes(module.id)
         } 
       })
     }

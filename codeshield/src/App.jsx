@@ -52,12 +52,6 @@ function MainPage() {
           >
             Start Your Journey
           </button>
-          <button 
-            className="achievements-btn" 
-            onClick={() => navigate('/achievements')}
-          >
-            View Achievements
-          </button>
         </div>
       </div>
     </div>

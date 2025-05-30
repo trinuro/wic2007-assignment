@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const quizData = {
-  "basic-security": {
+  1: {
     questions: [
       {
         question: "What is a strong password usually made up of?",

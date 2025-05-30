@@ -30,17 +30,40 @@ function ResultPage() {
   useEffect(() => {
     if (score && totalQuestions && moduleId) {
       const percentage = (score / totalQuestions) * 100;
-      if (percentage >= PASS_PERCENTAGE) {
-        // Save module completion to localStorage
-        const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
-        completedModules[moduleId] = {
-          score: score,
-          totalQuestions: totalQuestions,
-          completedAt: new Date().toISOString(),
-          badge: calculateBadge(score, totalQuestions)
-        };
-        localStorage.setItem('completedModules', JSON.stringify(completedModules));
+      
+      // Save module completion and badge data
+      const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
+      const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]');
+      
+      // Calculate badge based on score
+      const badge = calculateBadge(score, totalQuestions);
+      
+      // Update completed modules
+      completedModules[moduleId] = {
+        score,
+        totalQuestions,
+        completedAt: new Date().toISOString(),
+        percentage,
+        badge
+      };
+      
+      // Add new badge to earned badges if it doesn't exist
+      const badgeExists = earnedBadges.some(
+        b => b.moduleId === moduleId && b.name === badge.name
+      );
+      
+      if (!badgeExists) {
+        earnedBadges.push({
+          ...badge,
+          moduleId,
+          earnedAt: new Date().toISOString(),
+          score: percentage
+        });
       }
+      
+      // Save both to localStorage
+      localStorage.setItem('completedModules', JSON.stringify(completedModules));
+      localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
     }
   }, [score, totalQuestions, moduleId]);
 
@@ -48,8 +71,7 @@ function ResultPage() {
     const percentage = (score / total) * 100;
     if (percentage >= 80) return badges.gold;
     if (percentage >= 60) return badges.silver;
-    if (percentage >= 40) return badges.bronze;
-    return null;
+    return badges.bronze;
   };
 
   const handleRetry = () => {
@@ -110,7 +132,7 @@ function ResultPage() {
             Try Again
           </button>
           <button onClick={handleBackToDashboard} className="dashboard-btn">
-            Back to Home
+            Back to Dashboard
           </button>
         </div>
       </div>

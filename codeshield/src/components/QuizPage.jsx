@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const quizData = {
@@ -66,22 +66,13 @@ const quizData = {
 function QuizPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { moduleId, isRetake } = location.state || {};
+  const moduleId = location.state?.moduleId;
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showExplanation, setShowExplanation] = useState(false);
-
-  useEffect(() => {
-    // Reset progress when starting a new quiz session
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowScore(false);
-    setSelectedAnswer(null);
-    setShowExplanation(false);
-  }, [moduleId]);
 
   if (!moduleId || !quizData[moduleId]) {
     return (
@@ -119,8 +110,7 @@ function QuizPage() {
         state: {
           score: score + (questions[currentQuestion].correct === selectedAnswer ? 1 : 0),
           totalQuestions: questions.length,
-          moduleId,
-          isRetake
+          moduleId
         }
       });
     }

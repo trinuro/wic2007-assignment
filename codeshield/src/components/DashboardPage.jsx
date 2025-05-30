@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom'
 const modules = [
   {
     id: 1,
-    title: "Basic Cybersecurity",
-    description: "Learn fundamental concepts of cybersecurity including passwords, viruses, and online safety.",
-    icon: "🛡️",
+    title: "Social Media Safety",
+    description: "Learn how to protect yourself on social media platforms, handle friend requests safely, avoid online predators, and maintain your privacy in the digital world.",
+    icon: "🔒",
     difficulty: "Beginner"
   },
   {
     id: 2,
     title: "Online Privacy",
     description: "Coming soon: Discover how to protect your personal information online.",
-    icon: "🔒",
+    icon: "🛡️",
     difficulty: "Intermediate",
     comingSoon: true
   },

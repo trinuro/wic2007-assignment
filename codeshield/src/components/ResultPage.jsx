@@ -31,12 +31,12 @@ function ResultPage() {
     if (score && totalQuestions && moduleId) {
       const percentage = (score / totalQuestions) * 100;
       
-      // Save module completion and badge data
-      const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
-      const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]');
-      
       // Calculate badge based on score
       const badge = calculateBadge(score, totalQuestions);
+      
+      // Get existing data from localStorage
+      const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
+      const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]');
       
       // Update completed modules
       completedModules[moduleId] = {
@@ -47,23 +47,20 @@ function ResultPage() {
         badge
       };
       
-      // Add new badge to earned badges if it doesn't exist
-      const badgeExists = earnedBadges.some(
-        b => b.moduleId === moduleId && b.name === badge.name
-      );
+      // Remove any existing badges for this module
+      const filteredBadges = earnedBadges.filter(b => b.moduleId !== moduleId);
       
-      if (!badgeExists) {
-        earnedBadges.push({
-          ...badge,
-          moduleId,
-          earnedAt: new Date().toISOString(),
-          score: percentage
-        });
-      }
+      // Add the new badge
+      filteredBadges.push({
+        ...badge,
+        moduleId,
+        earnedAt: new Date().toISOString(),
+        score: percentage
+      });
       
       // Save both to localStorage
       localStorage.setItem('completedModules', JSON.stringify(completedModules));
-      localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
+      localStorage.setItem('earnedBadges', JSON.stringify(filteredBadges));
     }
   }, [score, totalQuestions, moduleId]);
 

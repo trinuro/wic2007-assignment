@@ -5,59 +5,59 @@ const quizData = {
   1: {
     questions: [
       {
-        question: "What is a strong password usually made up of?",
+        question: "You receive a friend request from someone you don't know. Their profile has very few details, but they send you a personal message complimenting your photos. What should you do?",
         options: [
-          "Your birthday and name",
-          "A combination of letters, numbers, and special characters",
-          "The word 'password' with numbers",
-          "Your pet's name"
+          "Accept the request—everyone deserves a chance.",
+          "Ignore or decline the request—only accept people you know.",
+          "Accept, then block them immediately.",
+          "Send them your phone number to prove trust."
         ],
         correct: 1,
-        explanation: "Strong passwords use a mix of different characters to make them harder to guess or crack."
+        explanation: "Only accept friend requests from people you know to avoid strangers who may be predators."
       },
       {
-        question: "Which of these is a common sign of a computer virus?",
+        question: "A new social media feature lets you share your real‑time location with followers for 'safety reasons.' What's the safest action?",
         options: [
-          "The computer runs faster than usual",
-          "Programs start or close without your permission",
-          "The screen becomes brighter",
-          "The keyboard makes clicking sounds"
+          "Enable it—friends should know where you are.",
+          "Only share with a small group of close friends.",
+          "Never enable real‑time location sharing with any followers.",
+          "Share for 24 hours, then disable it."
+        ],
+        correct: 2,
+        explanation: "Never enable real‑time location sharing—it exposes you to tracking by anyone who can view your profile."
+      },
+      {
+        question: "You see an ad offering free concert tickets if you click a link and fill out your profile details. How should you proceed?",
+        options: [
+          "Click and fill out—free tickets are awesome!",
+          "Research the promoter's official site first.",
+          "Share the link with friends before clicking.",
+          "Click, but only share basic info."
         ],
         correct: 1,
-        explanation: "Unexpected program behavior is a common sign of malware infection."
+        explanation: "Always verify promotions through official channels to avoid phishing."
       },
       {
-        question: "What should you do if you receive a suspicious email?",
+        question: "Which sign might indicate someone is trying to groom you online?",
         options: [
-          "Open all attachments to check them",
-          "Click links to verify they work",
-          "Delete it without opening",
-          "Forward it to all your contacts"
+          "They avoid personal questions.",
+          "They quickly ask to move to a private chat platform.",
+          "They only talk about school subjects.",
+          "They share public memes."
         ],
-        correct: 2,
-        explanation: "It's safest to delete suspicious emails without opening them to avoid potential security threats."
+        correct: 1,
+        explanation: "Groomers often push conversations to private channels."
       },
       {
-        question: "What is two-factor authentication?",
+        question: "Before trusting someone online, what's a reliable way to verify they are who they claim?",
         options: [
-          "Using two different passwords",
-          "Logging in from two devices",
-          "Using something you know and something you have",
-          "Sharing your password with two people"
+          "Video‑call them in small groups.",
+          "Trust their social media profile alone.",
+          "Check mutual connections and reputable sources.",
+          "Read their public comments."
         ],
         correct: 2,
-        explanation: "Two-factor authentication combines something you know (password) with something you have (like a phone) for better security."
-      },
-      {
-        question: "How often should you update your software?",
-        options: [
-          "Never, it's not important",
-          "Only when your computer breaks",
-          "As soon as updates are available",
-          "Once a year"
-        ],
-        correct: 2,
-        explanation: "Regular software updates are crucial as they often contain security patches for vulnerabilities."
+        explanation: "Checking mutual connections and verifying external sources reduces risk."
       }
     ]
   }

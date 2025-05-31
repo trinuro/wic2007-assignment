@@ -101,7 +101,7 @@ function AchievementsPage() {
             </div>
           </div>
         )}
-
+ <p></p>
         <button 
           className="back-btn"
           onClick={() => navigate('/dashboard')}

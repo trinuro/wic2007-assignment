@@ -18,11 +18,10 @@ const modules = [
   },
   {
     id: 3,
-    title: "Digital Defense",
-    description: "Coming soon: Master advanced techniques to defend against cyber threats.",
+    title: "Password Awareness",
+    description: "Learn to create and manage strong, unique passwords, understand why reuse is dangerous, and use password managers to safeguard your personal information.",
     icon: "⚔️",
     difficulty: "Advanced",
-    comingSoon: true
   }
 ]
 
@@ -77,7 +76,6 @@ function DashboardPage() {
             <div 
               key={module.id} 
               className={`module-card ${module.comingSoon ? 'coming-soon' : ''} ${completedModules.includes(module.id) ? 'completed' : ''}`}
-              onClick={() => handleModuleClick(module)}
             >
               {completedModules.includes(module.id) && (
                 <div className="completion-mark">✓</div>
@@ -86,13 +84,17 @@ function DashboardPage() {
               <h3>{module.title}</h3>
               <p>{module.description}</p>
               <div className="module-footer">
-                <span className="difficulty">{module.difficulty}</span>
                 {module.comingSoon ? (
                   <span className="coming-soon-badge">Coming Soon</span>
                 ) : (
-                  <span className="start-module">
-                    {completedModules.includes(module.id) ? 'Retake Module →' : 'Start Module →'}
-                  </span>
+                  <>
+                    <button className="courses-btn" onClick={() => navigate(`/courses/${module.id}`)}>
+                      Courses
+                    </button>
+                    <button className="start-module-btn" onClick={() => handleModuleClick(module)}>
+                      {completedModules.includes(module.id) ? 'Retake Module →' : 'Start Module →'}
+                    </button>
+                  </>
                 )}
               </div>
             </div>

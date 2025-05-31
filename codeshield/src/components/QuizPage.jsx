@@ -131,6 +131,66 @@ const quizData = {
         explanation: "A common tactic in scams is isolation: urging victims to stay silent and not seek advice, which prevents them from verifying the story or getting help."
       }
     ]
+  },
+  3: {
+    questions: [
+      {
+        question: "Which of the following is the strongest password?",
+        options: ["12345678", "password123", "John2005", "G!v3M3$3cur1ty!"],
+        correct: 3,
+        explanation: "Strong passwords use a combination of uppercase and lowercase letters, numbers, and symbols. 'G!v3M3$3cur1ty!' is complex and hard to guess."
+      },
+      {
+        question: "Why is it risky to use the same password for multiple accounts?",
+        options: [
+          "It makes logging in easier",
+          "It can cause slower internet speed",
+          "If one account is hacked, all accounts become vulnerable",
+          "Websites don't allow reused passwords"
+        ],
+        correct: 2,
+        explanation: "If hackers gain access to one account, they can try the same password on your other accounts and break in easily."
+      },
+      {
+        question: "What is two-factor authentication (2FA)?",
+        options: [
+          "Logging into two accounts at the same time",
+          "Using two different passwords",
+          "An extra step to verify your identity after entering your password",
+          "A type of antivirus software"
+        ],
+        correct: 2,
+        explanation: "2FA adds an extra layer of security by asking for something you have (like a code sent to your phone) in addition to your password."
+      },
+      {
+        question: "Which of the following should you AVOID when creating a password?",
+        options: [
+          "Using a mix of letters, numbers, and symbols",
+          "Using your name or birthdate",
+          "Changing your password regularly",
+          "Using different passwords for different sites"
+        ],
+        correct: 1,
+        explanation: "Personal information like your name or birthdate is easy for attackers to guess or find online."
+      },
+      {
+        question: "How often should you change your passwords for important accounts?",
+        options: ["Never", "Only if hacked", "Every 6–12 months", "Every day"],
+        correct: 2,
+        explanation: "Changing your password regularly reduces the risk of long-term exposure if it has been compromised without your knowledge."
+      },
+      {
+        question: "What is a password manager?",
+        options: [
+          "A tool that creates and stores strong passwords for you",
+          "A person who remembers your passwords",
+          "An antivirus feature",
+          "A browser extension to block ads"
+        ],
+        correct: 0,
+        explanation: "Password managers help you generate and securely store complex passwords so you don't have to remember them all."
+      }
+    ]
   }
 };
 

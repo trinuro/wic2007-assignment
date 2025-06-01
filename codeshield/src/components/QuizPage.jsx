@@ -207,6 +207,18 @@ function QuizPage() {
   const [isCorrect, setIsCorrect] = useState(false);
   const [showEffect, setShowEffect] = useState(false);
 
+  useEffect(() => {
+    if (showScore) {
+      navigate('/result', {
+        state: {
+          score: score,
+          totalQuestions: quizData[moduleId].questions.length,
+          moduleId
+        }
+      });
+    }
+  }, [showScore, score, moduleId, navigate]);
+
   if (!moduleId || !quizData[moduleId]) {
     return (
       <div className="quiz-page">
@@ -248,13 +260,6 @@ function QuizPage() {
       setShowExplanation(false);
     } else {
       setShowScore(true);
-      navigate('/result', {
-        state: {
-          score: score,
-          totalQuestions: questions.length,
-          moduleId
-        }
-      });
     }
   };
 

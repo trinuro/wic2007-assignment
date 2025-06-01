@@ -64,8 +64,9 @@ function ResultPage() {
   const { score, totalQuestions, moduleId } = location.state || {};
 
   useEffect(() => {
-    if (score && totalQuestions && moduleId) {
+    if (typeof score === 'number' && totalQuestions && moduleId) {
       const percentage = (score / totalQuestions) * 100;
+      const passed = percentage >= PASS_PERCENTAGE;
       
       // Calculate badge based on score
       const badge = calculateBadge(score, totalQuestions);
@@ -74,29 +75,43 @@ function ResultPage() {
       const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
       const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]');
       
-      // Update completed modules
-      completedModules[moduleId] = {
-        score,
-        totalQuestions,
-        completedAt: new Date().toISOString(),
-        percentage,
-        badge
-      };
-      
-      // Remove any existing badges for this module
-      const filteredBadges = earnedBadges.filter(b => b.moduleId !== moduleId);
-      
-      // Add the new badge
-      filteredBadges.push({
-        ...badge,
-        moduleId,
-        earnedAt: new Date().toISOString(),
-        score: percentage
-      });
-      
-      // Save both to localStorage
-      localStorage.setItem('completedModules', JSON.stringify(completedModules));
-      localStorage.setItem('earnedBadges', JSON.stringify(filteredBadges));
+      if (passed) {
+        // Only update completed modules if the user passed
+        completedModules[moduleId] = {
+          score,
+          totalQuestions,
+          completedAt: new Date().toISOString(),
+          percentage,
+          badge,
+          passed: true
+        };
+        
+        // Remove any existing badges for this module
+        const filteredBadges = earnedBadges.filter(b => b.moduleId !== moduleId);
+        
+        // Add the new badge
+        filteredBadges.push({
+          ...badge,
+          moduleId,
+          earnedAt: new Date().toISOString(),
+          score: percentage
+        });
+        
+        // Save both to localStorage
+        localStorage.setItem('completedModules', JSON.stringify(completedModules));
+        localStorage.setItem('earnedBadges', JSON.stringify(filteredBadges));
+      } else {
+        // If not passed, store the attempt but mark as not passed
+        completedModules[moduleId] = {
+          score,
+          totalQuestions,
+          completedAt: new Date().toISOString(),
+          percentage,
+          badge,
+          passed: false
+        };
+        localStorage.setItem('completedModules', JSON.stringify(completedModules));
+      }
     }
   }, [score, totalQuestions, moduleId]);
 
@@ -116,7 +131,7 @@ function ResultPage() {
     navigate('/dashboard');
   };
 
-  if (!score || !totalQuestions) {
+  if (typeof score !== 'number' || !totalQuestions) {
     return (
       <div className="result-page">
         <div className="result-card">
@@ -158,7 +173,7 @@ function ResultPage() {
         <div className="message">
           {passed 
             ? "Congratulations! You've completed this module! 🎉"
-            : "Keep practicing to improve your cybersecurity knowledge!"}
+            : "Keep practicing to improve your cybersecurity knowledge! You need to score at least 60% to complete this module."}
         </div>
 
         <div className="action-buttons">

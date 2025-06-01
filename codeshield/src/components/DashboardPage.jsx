@@ -31,14 +31,22 @@ function DashboardPage() {
   const [completedModules, setCompletedModules] = useState([])
 
   useEffect(() => {
+    // Load completed modules from localStorage
+    const savedModules = localStorage.getItem('completedModules')
+    if (savedModules) {
+      const modules = JSON.parse(savedModules)
+      // Only consider modules that have been passed
+      const passedModuleIds = Object.entries(modules)
+        .filter(([_, data]) => data.passed)
+        .map(([id]) => parseInt(id))
+      setCompletedModules(passedModuleIds)
+    }
+
     // Load earned badges from localStorage
     const savedBadges = localStorage.getItem('earnedBadges')
     if (savedBadges) {
       const badges = JSON.parse(savedBadges)
       setEarnedBadges(badges)
-      // Extract completed module IDs from badges
-      const completed = [...new Set(badges.map(badge => badge.moduleId))]
-      setCompletedModules(completed)
     }
   }, [])
 

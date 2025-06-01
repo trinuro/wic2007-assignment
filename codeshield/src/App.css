@@ -22,11 +22,14 @@ body {
   color: var(--text-bright);
   font-family: 'Segoe UI', 'Arial', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .logo {
@@ -73,11 +76,44 @@ body {
   background-color: #0a192f;
   color: white;
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Cybersecurity grid background effect */
+.main-page::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(#00ffe715 1px, transparent 1px),
+    linear-gradient(90deg, #00ffe715 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  animation: gridMove 30s linear infinite;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes gridMove {
+  0% { transform: rotate(45deg) translate(-50%, -50%); }
+  100% { transform: rotate(45deg) translate(-25%, -25%); }
+}
+
+.main-page > * {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
 }
 
 .content {
   max-width: 800px;
   text-align: center;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 h1 {
@@ -277,40 +313,6 @@ p {
 .retry-btn:hover, .dashboard-btn:hover {
   transform: translateY(-2px);
   opacity: 0.9;
-}
-
-/* Cybersecurity grid background effect */
-.main-page::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: 
-    linear-gradient(#00ffe715 1px, transparent 1px),
-    linear-gradient(90deg, #00ffe715 1px, transparent 1px);
-  background-size: 50px 50px;
-  transform: rotate(45deg);
-  animation: gridMove 30s linear infinite;
-  z-index: 1;
-}
-
-@keyframes gridMove {
-  0% { transform: rotate(45deg) translate(-50%, -50%); }
-  100% { transform: rotate(45deg) translate(0%, 0%); }
-}
-
-.main-page > *, .quiz-page > *, .result-page > * {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Quiz page specific styles */

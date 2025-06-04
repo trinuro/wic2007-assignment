@@ -5,21 +5,21 @@ const modules = [
   {
     id: 1,
     title: "Social Media Safety",
-    description: "Learn how to protect yourself on social media platforms, handle friend requests safely, avoid online predators, and maintain your privacy in the digital world.",
+    //description: "Learn how to protect yourself on social media platforms, handle friend requests safely, avoid online predators, and maintain your privacy in the digital world.",
     icon: "🔒",
     difficulty: "Beginner"
   },
   {
     id: 2,
     title: "Phishing",
-    description: "Learn to identify and protect yourself from phishing attempts, scams, and social engineering attacks that try to steal your personal information.",
+    //description: "Learn to identify and protect yourself from phishing attempts, scams, and social engineering attacks that try to steal your personal information.",
     icon: "🎣",
     difficulty: "Intermediate"
   },
   {
     id: 3,
-    title: "Password Awareness",
-    description: "Learn to create and manage strong, unique passwords, understand why reuse is dangerous, and use password managers to safeguard your personal information.",
+    title: "Authentication",
+    //description: "Learn to create and manage strong, understand why reuse is dangerous, and use password managers to safeguard your personal information.",
     icon: "⚔️",
     difficulty: "Advanced",
   }
@@ -91,19 +91,40 @@ function DashboardPage() {
               <div className="module-icon">{module.icon}</div>
               <h3>{module.title}</h3>
               <p>{module.description}</p>
+              {!module.comingSoon && (
+                <div style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
+                  <button
+                    className="start-learning-btn-pixel"
+                    style={{
+                      minWidth: 140,
+                      background: '#0a192f',
+                      color: '#64ffda',
+                      fontWeight: 900,
+                      fontSize: '1.1rem',
+                      fontFamily: 'monospace, \"Press Start 2P\", \"VT323\", \"Courier New\", Courier',
+                      border: '4px solid #64ffda',
+                      borderRadius: 0,
+                      boxShadow: '0 0 0 4px #0a192f',
+                      padding: '1rem 2.5rem',
+                      cursor: 'pointer',
+                      letterSpacing: '2px',
+                      textTransform: 'uppercase',
+                      transition: 'transform 0.1s',
+                      outline: 'none',
+                    }}
+                    onMouseDown={e => { e.currentTarget.style.transform = 'translateY(2px)'; }}
+                    onMouseUp={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+                    onClick={() => navigate(`/module/${module.id}`)}
+                  >
+                    START LEARNING
+                  </button>
+                </div>
+              )}
               <div className="module-footer">
                 {module.comingSoon ? (
                   <span className="coming-soon-badge">Coming Soon</span>
-                ) : (
-                  <>
-                    <button className="courses-btn" onClick={() => navigate(`/courses/${module.id}`)}>
-                      Courses
-                    </button>
-                    <button className="start-module-btn" onClick={() => handleModuleClick(module)}>
-                      {completedModules.includes(module.id) ? 'Retake Module →' : 'Start Module →'}
-                    </button>
-                  </>
-                )}
+                ) : null}
               </div>
             </div>
           ))}

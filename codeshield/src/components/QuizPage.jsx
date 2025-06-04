@@ -191,6 +191,76 @@ const quizData = {
         explanation: "Password managers help you generate and securely store complex passwords so you don't have to remember them all."
       }
     ]
+  },
+  4: {
+    questions: [
+      {
+        question: "Which of the following practices helps reduce the risk of being stalked on Facebook?",
+        options: [
+          "Joining more public groups",
+          "Using the 'View As' feature",
+          "Posting your school and birthday",
+          "Accepting all friend requests"
+        ],
+        correct: 1,
+        explanation: "The 'View As' feature lets you see how your profile appears to strangers, helping you identify and limit exposed personal information."
+      },
+      {
+        question: "Why should teens avoid engaging in 'Add Yours' sticker trends on Instagram?",
+        options: [
+          "They decrease follower count",
+          "They lead to account suspension",
+          "They can reveal too much personal information",
+          "They don't work on private accounts"
+        ],
+        correct: 2,
+        explanation: "'Add Yours' stickers often encourage oversharing, which can be used to profile or scam users."
+      },
+      {
+        question: "What is a safe action if someone on TikTok asks you to join a dangerous viral challenge?",
+        options: [
+          "Ignore and do it anyway",
+          "Record a duet mocking it",
+          "Report the trend and avoid participation",
+          "Comment that the trend is fake"
+        ],
+        correct: 2,
+        explanation: "Reporting harmful content and avoiding participation are the safest ways to handle potentially dangerous trends."
+      },
+      {
+        question: "Which red flag might suggest a grooming attempt?",
+        options: [
+          "A request to switch to a private messaging app",
+          "A compliment on your public post",
+          "A like on an old photo",
+          "A mutual friend request"
+        ],
+        correct: 0,
+        explanation: "Groomers often try to isolate teens by moving conversations to private or encrypted platforms where monitoring is harder."
+      },
+      {
+        question: "Why should users avoid anonymous Q&A features in unknown apps?",
+        options: [
+          "They reduce app performance",
+          "They are illegal",
+          "They can be used for bullying and harassment",
+          "They don't allow profile pictures"
+        ],
+        correct: 2,
+        explanation: "Anonymous features often lack moderation, making them prime tools for cyberbullying and abuse."
+      },
+      {
+        question: "What is a universal smart safety habit recommended in the module?",
+        options: [
+          "Changing your profile name weekly",
+          "Posting chat screenshots",
+          "Performing a monthly privacy check",
+          "Using a public Wi-Fi without VPN"
+        ],
+        correct: 2,
+        explanation: "Regular privacy checks help users stay updated on their settings and limit unintended data exposure."
+      }
+    ]
   }
 };
 

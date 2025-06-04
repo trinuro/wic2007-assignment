@@ -323,6 +323,119 @@ const socialMediaTheory = (
   </div>
 );
 
+const socialMediaTheory2_0 = (
+  <div>
+    <section className="course-section">
+      <h2>1.Understanding the Risks Behind the Platforms You Love</h2>
+      
+      <h3>1.1 Facebook – Profile Stalking and Hidden Data Exposure</h3>
+      <b>What Teens Do: </b>Share life updates, school info, and join groups.
+      <p> </p>
+      <b>Risks:</b>
+      <ul>
+        <li>Even private posts may leak through mutual connections.</li>
+        <li>School, birthdate, and town info help guess passwords/security questions.</li>
+        <li>Algorithmic friend suggestions reveal your profile to unsafe individuals.</li>
+      </ul>
+      <b>Safe Practices:</b>
+      <ul>
+        <li>Limit profile visibility (hide school, birthday, etc.).</li>
+        <li>Remove old posts via Activity Log.</li>
+        <li>Leave sketchy public groups.</li>
+        <li>Use "View As" to simulate a stranger's view of your profile.</li>
+      </ul>
+      <p></p>
+      <h3>1.2 Instagram – Fake Influencers and Bot Comments</h3>
+      <b>What Teens Do:</b> Follow trends, post reels, interact with influencers.
+      <p></p>
+      <b>Risks:</b>
+      <ul>
+        <li>Scams via fake influencer collabs and comment bots.</li>
+        <li>Story Q&As can be mined for personal info.</li>
+        <li>"Close Friends" list can be exploited to build trust.</li>
+      </ul>
+      <b>Safe Practices:</b>
+      <ul>
+        <li>Don't trust collab DMs unless verified.</li>
+        <li>Use "Restrict" feature for suspicious followers.</li>
+        <li>Audit "Close Friends" list monthly.</li>
+        <li>Avoid clicking external links in comment sections.</li>
+      </ul>
+      <p></p>
+      <h3>1.3 TikTok – Misinformation and Dangerous Challenges</h3>
+      <b>What Teens Do:</b> Scroll FYP, post challenges, watch duets/stitches.
+      <p></p>
+      <b>Risks:</b>
+      <ul>
+        <li>Exposure to health misinformation and illegal trends.</li>
+        <li>Filters skew body image.</li>
+        <li>Duet/stitch can be misused for mockery.</li>
+      </ul>
+      <b>Safe Practices:</b>
+      <ul>
+        <li>Disable duet/stitch for sensitive content.</li>
+        <li>Use Digital Wellbeing to limit screen time and content.</li>
+        <li>Research before participating in trends.</li>
+        <li>Think before posting—the internet is forever.</li>
+      </ul>
+      <p></p>
+      <h3>1.4 Unknown Apps – Privacy Risks and Fake Anonymity</h3>
+      <b>What Teens Do:</b> Explore lesser-known apps to escape parental oversight.
+      <p></p>
+      <b>Risks:</b>
+      <ul>
+        <li>Weak moderation invites harassment.</li>
+        <li>Anonymous Q&A features used for bullying.</li>
+        <li>Data often retained even after deletion.</li>
+      </ul>
+      <b>Safe Practices:</b>
+      <ul>
+        <li>Avoid apps not listed in official stores.</li>
+        <li>Say no to anonymous message features.</li>
+        <li>Check app permissions.</li>
+        <li>Read privacy policies—know where your data goes.</li>
+      </ul>
+      <p></p>
+      <h2>2. Trends That Seem Safe But Aren't</h2>
+      <ul>
+        <li>Story Polls/Q&As: Used to manipulate or profile users.</li>
+        <li>Graduation/Birthday Posts: Reveal schedule/location.</li>
+        <li>Add Yours Stickers: Encourage oversharing.</li>
+        <li>Follow-for-Follow Chains: Increase exposure to bots and scammers.</li>
+      </ul>
+      <p></p>
+      <h2>3. Universal Smart Safety Habits</h2>
+      <ul>
+        <li>Perform a privacy check monthly.</li>
+        <li>Avoid posting chat screenshots.</li>
+        <li>Clean up DMs regularly.</li>
+        <li>Use strong, unique passwords with a password manager.</li>
+        <li>Pause and reflect: "Could this be used against me?"</li>
+      </ul>
+      <p></p>
+      <h2>4. Situational Safety Scenarios</h2>
+      <ul>
+        <li><b>Unknown Friend Request with a Personal Compliment:</b> Check for incomplete profiles, excessive flattery, and lack of mutual connections. <i>Action:</i> Decline or block unsolicited requests.</li>
+        <li><b>Real-Time Location Sharing:</b> Understand GPS-sharing risks and disable unless absolutely necessary. <i>Action:</i> Only share with close family/friends during emergencies.</li>
+        <li><b>Suspicious 'Free Concert Tickets' Ad:</b> Watch for fake domains, urgency tactics, and over-collection of data. <i>Action:</i> Always verify through official artist or venue channels.</li>
+        <li><b>Grooming Attempt – Moving to Private Chat:</b> Be alert to someone trying to isolate you by switching to a private app. <i>Action:</i> Block and report. Talk to a trusted adult.</li>
+        <li><b>Fake Profiles – Verifying Identity:</b> Use reverse image search, mutual friend verification, and cross-platform checks. <i>Action:</i> Do not trust unknown accounts without multi-source validation.</li>
+        <li><b>Manipulative Compliments from a Stranger:</b> Excessive flattery and attempts to be a "best friend" are red flags. <i>Action:</i> Respond politely if needed, but block and report if behavior continues.</li>
+      </ul>
+    </section>
+
+    <p></p>
+
+    <h3>Learning Objectives</h3>
+      <ul>
+        <li>Recognize platform-specific risks across popular social media apps.</li>
+        <li>Apply privacy settings and safety features unique to each platform.</li>
+        <li>Identify and avoid manipulative trends, scams, and data leaks.</li>
+        <li>Make informed decisions about what to share and who to engage with.</li>
+      </ul>
+  </div>
+);
+
 const phishingTheory = (
   <div>
     {/* Section 1 */}
@@ -738,6 +851,10 @@ const moduleTheory = {
   3: {
     title: 'Password Awareness',
     content: passwordAwarenessTheory
+  },
+  4: {
+      title: 'Social Media Safety',
+      content: socialMediaTheory2_0
   }
 };
 
@@ -751,7 +868,60 @@ function CoursesPage() {
       <div className="quiz-container">
         <h1>{module.title}</h1>
         <div style={{ margin: '2rem 0', textAlign: 'left' }}>{module.content}</div>
-        <button className="next-btn" onClick={() => navigate('/dashboard')}>Back to Dashboard</button>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem', width: '100%' }}>
+          <button
+            className="back-btn-pixel"
+            style={{
+              minWidth: 100,
+              background: '#0a192f',
+              color: '#64ffda',
+              fontWeight: 900,
+              fontSize: '1.1rem',
+              fontFamily: 'monospace, "Press Start 2P", "VT323", "Courier New", Courier',
+              border: '4px solid #64ffda',
+              borderRadius: 0,
+              boxShadow: '0 0 0 4px #0a192f',
+              padding: '1rem 2.5rem',
+              cursor: 'pointer',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              transition: 'transform 0.1s',
+              outline: 'none',
+            }}
+            onMouseDown={e => { e.currentTarget.style.transform = 'translateY(2px)'; }}
+            onMouseUp={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+            onClick={() => navigate(-1)}
+          >
+            BACK
+          </button>
+          <button
+            className="quiz-btn-pixel"
+            style={{
+              minWidth: 120,
+              background: '#0a192f',
+              color: '#64ffda',
+              fontWeight: 900,
+              fontSize: '1.1rem',
+              fontFamily: 'monospace, "Press Start 2P", "VT323", "Courier New", Courier',
+              border: '4px solid #64ffda',
+              borderRadius: 0,
+              boxShadow: '0 0 0 4px #0a192f',
+              padding: '1rem 2.5rem',
+              cursor: 'pointer',
+              letterSpacing: '2px',
+              textTransform: 'uppercase',
+              transition: 'transform 0.1s',
+              outline: 'none',
+            }}
+            onMouseDown={e => { e.currentTarget.style.transform = 'translateY(2px)'; }}
+            onMouseUp={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+            onClick={() => navigate('/quiz', { state: { moduleId: Number(moduleId) } })}
+          >
+            QUIZ
+          </button>
+        </div>
       </div>
     </div>
   );

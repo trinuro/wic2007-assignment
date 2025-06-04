@@ -6,6 +6,7 @@ import ResultPage from './components/ResultPage'
 import DashboardPage from './components/DashboardPage'
 import AchievementsPage from './components/AchievementsPage'
 import CoursesPage from './components/CoursesPage'
+import ModulePage from './components/ModulePage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/result" element={<ResultPage />} />
         <Route path="/achievements" element={<AchievementsPage />} />
         <Route path="/courses/:moduleId" element={<CoursesPage />} />
+        <Route path="/module/:moduleId" element={<ModulePage />} />
       </Routes>
     </Router>
   )

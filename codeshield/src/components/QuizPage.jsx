@@ -261,6 +261,149 @@ const quizData = {
         explanation: "Regular privacy checks help users stay updated on their settings and limit unintended data exposure."
       }
     ]
+  },
+  5: {
+    questions: [
+      {
+        question: "Which of the following is a common red flag in fake job or internship offers?",
+        options: [
+          "Detailed job descriptions with company contacts",
+          "Requesting payment for job kits or training",
+          "Interviews conducted via official platforms",
+          "Use of company email addresses like @google.com"
+        ],
+        correct: 1,
+        explanation: "Legitimate employers never ask for upfront payments. Scammers often trick victims into paying for fake job kits or training."
+      },
+      {
+        question: "How do tech support scammers typically gain control of your device?",
+        options: [
+          "By sending friend requests",
+          "By asking for your Wi-Fi password",
+          "By requesting you install remote access tools",
+          "By offering free antivirus software"
+        ],
+        correct: 2,
+        explanation: "Scammers often ask victims to install tools like TeamViewer or AnyDesk, which give them full control over the device."
+      },
+      {
+        question: "What tactic is commonly used in fake online marketplace buyer scams?",
+        options: [
+          "Offering to meet in public",
+          "Overpaying and asking for a refund before payment clears",
+          "Using platform’s in-app chat",
+          "Requesting payment through Shopee or Lazada"
+        ],
+        correct: 1,
+        explanation: "Scammers overpay and request a refund before the money clears, tricking sellers into sending real money for fake payments."
+      },
+      {
+        question: "What makes a social media giveaway suspicious?",
+        options: [
+          "It’s promoted by a verified page",
+          "It asks you to like and comment",
+          "It requires clicking a link in the bio from an unverified page",
+          "It features multiple prize winners"
+        ],
+        correct: 2,
+        explanation: "Scammers create fake accounts and use bio links to collect personal data. Always verify the page's authenticity."
+      },
+      {
+        question: "Why is the phrase 'You've been specially selected' in a job offer suspicious?",
+        options: [
+          "It’s commonly used by HR managers",
+          "It creates urgency and pressure to respond",
+          "It shows the company values you",
+          "It confirms you're qualified"
+        ],
+        correct: 1,
+        explanation: "Scammers use exclusivity and urgency to push victims into acting quickly without thinking or verifying."
+      },
+      {
+        question: "What is the best way to verify a suspicious job offer?",
+        options: [
+          "Reply directly to the email you received",
+          "Check the company’s LinkedIn page for similar offers",
+          "Search the job title on job scam forums",
+          "Contact the company directly through their official website"
+        ],
+        correct: 3,
+        explanation: "Verifying job offers through the official company site or HR department is the most reliable way to avoid scams."
+      }
+    ]
+    
+  },
+
+6: {
+  questions: [
+    {
+      question: "What is an example of the 'Something Only You Should Know' authentication factor?",
+      options: [
+        "Fingerprint scan",
+        "Password",
+        "Hardware security key",
+        "OTP app code"
+      ],
+      correct: 1,
+      explanation: "'Something Only You Should Know' refers to knowledge factors like passwords, PINs, or security question answers."
+    },
+    {
+      question: "Why is multi-factor authentication (MFA) considered your strongest defense?",
+      options: [
+        "It replaces passwords entirely",
+        "It uses only biometric verification",
+        "It combines two or more authentication factors to block most attacks",
+        "It stores your password securely"
+      ],
+      correct: 2,
+      explanation: "MFA requires two or more factors, like password + OTP, which blocks over 90% of phishing and credential-stuffing attacks."
+    },
+    {
+      question: "Which of the following is a safer alternative to SMS-based OTP for two-factor authentication?",
+      options: [
+        "Using password hints",
+        "Using authenticator apps like Google Authenticator",
+        "Using email verification",
+        "Using a simple PIN"
+      ],
+      correct: 1,
+      explanation: "Authenticator apps generate time-based codes offline and are less vulnerable to interception or SIM swapping compared to SMS."
+    },
+    {
+      question: "What is a key risk of relying solely on biometric authentication?",
+      options: [
+        "Biometrics are easy to fake",
+        "Biometrics always work on every device",
+        "You need a backup method if biometric fails or is unavailable",
+        "Biometric data changes frequently"
+      ],
+      correct: 2,
+      explanation: "Biometric authentication may not always be available or may fail, so having a backup method is important."
+    },
+    {
+      question: "Which of the following is a common authentication mistake to avoid?",
+      options: [
+        "Using a password manager",
+        "Reusing the same password across multiple accounts",
+        "Enabling multi-factor authentication",
+        "Using hardware security keys"
+      ],
+      correct: 1,
+      explanation: "Reusing passwords increases risk because if one account is compromised, others become vulnerable."
+    },
+    {
+      question: "In the university email phishing example, how does enabling MFA help?",
+      options: [
+        "It prevents the phishing email from arriving",
+        "It blocks access even if the password is stolen",
+        "It automatically deletes phishing emails",
+        "It logs you out every hour"
+      ],
+      correct: 1,
+      explanation: "Even if a phisher gets the password, they cannot access the account without the second factor, such as an OTP from an authenticator app."
+    }
+  ]
+  
   }
 };
 

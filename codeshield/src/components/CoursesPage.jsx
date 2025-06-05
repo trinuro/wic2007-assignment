@@ -327,7 +327,7 @@ const socialMediaTheory2_0 = (
   <div>
     <section className="course-section">
       <h2>1.Understanding the Risks Behind the Platforms You Love</h2>
-      
+
       <h3>1.1 Facebook – Profile Stalking and Hidden Data Exposure</h3>
       <b>What Teens Do: </b>Share life updates, school info, and join groups.
       <p> </p>
@@ -636,6 +636,177 @@ const phishingTheory = (
   </div>
 );
 
+const phishingTheory2_0 = (
+  <div>
+    <section className="course-section">
+  <h2>1. Job Offer or Internship Scam</h2>
+  <h3>1.1 How Phishers Exploit Career Ambitions</h3>
+  <ul>
+    <li><b>Too-Good-To-Be-True Offers</b>
+      <ul>
+        <li>Scammers offer high-paying remote jobs or internships with vague descriptions.</li>
+        <li>Target fresh graduates or students seeking opportunities.</li>
+      </ul>
+    </li>
+    <li><b>Impersonation of Well-Known Companies</b>
+      <ul>
+        <li>Use logos of companies like Petronas, Shell, or Google.</li>
+        <li>Create fake LinkedIn profiles and email addresses that look legitimate (e.g., hr.google.career@gmail.com).</li>
+      </ul>
+    </li>
+  </ul>
+  <p></p>
+  <h3>1.2 Recognizing a Fake Job Offer</h3>
+  <ul>
+    <li><b>Lack of Proper Interview Process</b>
+      <ul>
+        <li>Immediate job confirmations without interviews are red flags.</li>
+        <li>Real employers follow structured hiring processes.</li>
+      </ul>
+    </li>
+    <li><b>Requests for Upfront Payment</b>
+      <ul>
+        <li>Victims are asked to pay for “job kits,” registration, or training.</li>
+        <li>Legitimate employers never charge job seekers.</li>
+      </ul>
+    </li>
+  </ul>
+  <p></p>
+  <h3>1.3 Play on Urgency and Opportunity</h3>
+  <ul>
+    <li><b>False Sense of Exclusivity</b>
+      <ul>
+        <li>"You’ve been specially selected" or “limited slots” language adds pressure.</li>
+        <li>Designed to rush victims into sharing personal data or paying fees.</li>
+      </ul>
+    </li>
+  </ul>
+  <p></p>
+  <h3>1.4 Best Practices When Receiving Job Offers Online</h3>
+  <ul>
+    <li>Research the company and job posting independently via their official site.</li>
+    <li>Avoid responding to personal email domains (e.g., Gmail, Yahoo).</li>
+    <li>Contact the HR department directly through official company channels.</li>
+    <li>Report suspicious offers to campus career centers or authorities.</li>
+  </ul>
+</section>
+<p></p>
+<section className="course-section">
+  <h2>2. Tech Support Scam</h2>
+  <h3>2.1 How Scammers Impersonate IT Help</h3>
+  <ul>
+    <li><b>Fake Virus Alerts</b>
+      <ul>
+        <li>Pop-ups or calls claim “your device is infected.”</li>
+        <li>Urge immediate action to call a “Microsoft technician.”</li>
+      </ul>
+    </li>
+    <li><b>Remote Access Requests</b>
+      <ul>
+        <li>Scammers ask to install remote tools like AnyDesk or TeamViewer.</li>
+        <li>This gives them full control over your device.</li>
+      </ul>
+    </li>
+  </ul>
+  <p></p>
+  <h3>2.2 Why Technical Jargon Can Be Misleading</h3>
+  <ul>
+    <li>Scammers use terms like “IP conflict,” “driver failure,” or “registry error.”</li>
+    <li>Designed to sound convincing, even though the user may not understand them.</li>
+  </ul>
+  <p></p>
+  <h3>2.3 Common Signs of a Tech Support Scam</h3>
+  <ul>
+    <li>Unsolicited messages or calls claiming system issues.</li>
+    <li>Promises to “fix everything remotely” for a fee.</li>
+    <li>Scammers may show fake diagnostics or logs.</li>
+  </ul>
+  <p></p>
+  <h3>2.4 Best Practices Against Tech Support Scams</h3>
+  <ul>
+    <li>Close the browser tab or restart the device—don’t call any number shown in a pop-up.</li>
+    <li>Never share passwords or grant remote access to unknown technicians.</li>
+    <li>Verify issues through official manufacturer support pages.</li>
+    <li>Use browser pop-up blockers and antivirus software.</li>
+  </ul>
+</section>
+<p></p>
+<section className="course-section">
+  <h2>3. Online Marketplace Scams</h2>
+  <h3>3.1 Common Buyer & Seller Traps</h3>
+  <ul>
+    <li><b>Fake Buyer Scenarios</b>
+      <ul>
+        <li>Buyer “accidentally overpays” and asks for a refund before payment clears.</li>
+        <li>Scam relies on the seller trusting the payment screenshot.</li>
+      </ul>
+    </li>
+    <li><b>Fake Seller Scenarios</b>
+      <ul>
+        <li>Attractive product listings with prices too low to be real.</li>
+        <li>Payment requested upfront via insecure methods like direct bank transfer.</li>
+      </ul>
+    </li>
+  </ul>
+  <p></p>
+  <h3>3.2 Red Flags in Online Transactions</h3>
+  <ul>
+    <li>No in-platform communication—scammers request to “chat on WhatsApp.”</li>
+    <li>Avoids using platforms with built-in buyer/seller protection.</li>
+    <li>Unusual urgency (“first come, first serve!”).</li>
+  </ul>
+  <p></p>
+  <h3>3.3 Best Practices for Safe Online Buying/Selling</h3>
+  <ul>
+    <li>Always use marketplace apps with payment protection (e.g., Shopee, Lazada, Carousell).</li>
+    <li>Meet in public places for high-value items.</li>
+    <li>Never send personal info or OTPs to strangers.</li>
+    <li>Verify buyer/seller profiles and reviews before transactions.</li>
+  </ul>
+</section>
+<p></p>
+<section className="course-section">
+  <h2>4. Social Media Phishing via Fake Giveaways</h2>
+  <h3>4.1 How Social Platforms Are Abused</h3>
+  <ul>
+    <li>Fake Instagram pages mimic real brands (e.g., Watsons, Uniqlo).</li>
+    <li>Require users to “click the link in bio” to win prizes.</li>
+  </ul>
+  <p></p>
+  <h3>4.2 Lure of Free Items and Engagement Bait</h3>
+  <ul>
+    <li>“Like, share, and comment to win an iPhone!”</li>
+    <li>Scammers use engagement to gain credibility and spread reach.</li>
+  </ul>
+  <p></p>
+  <h3>4.3 Real vs Fake Giveaways</h3>
+  <ul>
+    <li>Real giveaways are announced on official verified pages.</li>
+    <li>Scammers use newly made accounts with few followers or odd handles.</li>
+  </ul>
+  <p></p>
+  <h3>4.4 Best Practices on Social Media Giveaways</h3>
+  <ul>
+    <li>Confirm giveaways on official websites or verified pages.</li>
+    <li>Avoid clicking bio links or filling out forms with personal info.</li>
+    <li>Report fake pages to platform moderators.</li>
+  </ul>
+</section>
+<p></p>
+<section className="course-section">
+  <h2>5. Key Takeaways & Core Learning Objectives</h2>
+  <ul>
+    <li>Learn to identify scams related to fake job offers, technical support, online marketplaces, and giveaways.</li>
+    <li>Understand how urgency, exclusivity, or authority are used to manipulate victims.</li>
+    <li>Build habits like verifying domains, rejecting remote access requests, and reporting suspicious activity.</li>
+    <li>Practice safe online behavior by using official platforms, avoiding direct transfers, and using security tools.</li>
+    <li>Recognize phishing on new fronts like LinkedIn, Instagram, and ecommerce apps.</li>
+  </ul>
+</section>
+
+  </div>
+);
+
 const passwordAwarenessTheory = (
   <div>
     {/* Section 1 */}
@@ -839,6 +1010,117 @@ const passwordAwarenessTheory = (
   </div>
 );
 
+const authenticationTheory = (
+  <div>
+    {/* Section 1 */}
+<section className="course-section">
+  <h2>1. Authentication Methods to Avoid Cyber Threats</h2>
+
+  <h3>1.1. Understanding Authentication Factors</h3>
+  <ul>
+    <li><b>Something Only You Should Know (Knowledge Factor)</b>
+      <ul>
+        <li>Examples: Passwords, PINs, security question answers</li>
+        <li>Risks: Easy to guess if weak, often reused, can be phished</li>
+        <li>Tip: Avoid using names, birthdays, or “123456” as passwords</li>
+      </ul>
+    </li>
+    <li><b>Something Only You Should Have (Possession Factor)</b>
+      <ul>
+        <li>Examples: OTP apps (like Google Authenticator), smartcards, SMS codes</li>
+        <li>Stronger than passwords alone — adds physical verification</li>
+        <li>Tip: Use apps over SMS for fewer interception risks</li>
+      </ul>
+    </li>
+    <li><b>Biometric actor (Inherence Factor)</b>
+      <ul>
+        <li>Examples: Fingerprint, Face ID, iris scan</li>
+        <li>Hard to fake but not always available on all devices</li>
+        <li>Note: Still need a backup method in case the biometric fails</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p></p>
+  <h3>1.2. Multi-Factor Authentication (MFA): Your Strongest Defense</h3>
+  <ul>
+    <li>MFA = using two or more factors (e.g., password + OTP)</li>
+    <li>Blocks over 90% of common phishing and credential-stuffing attacks</li>
+    <li>Even if your password is leaked, hackers can't access without the second factor</li>
+    <li>Use it for: Banking, Gmail, social media, cloud storage, university accounts</li>
+  </ul>
+
+  <p></p>
+  <h3>1.3. Stronger Alternatives to Traditional Passwords</h3>
+  <ul>
+    <li><b>Passkeys:</b>
+      <ul>
+        <li>Let you log in with fingerprint/face instead of typing a password</li>
+        <li>Synced with your device – phishing-resistant</li>
+        <li>Used by Google, Apple, Microsoft</li>
+      </ul>
+    </li>
+    <li><b>Authenticator Apps:</b>
+      <ul>
+        <li>Time-based codes that change every 30 seconds</li>
+        <li>Examples: Google Authenticator, Authy, Microsoft Authenticator</li>
+        <li>More secure than SMS – works offline</li>
+      </ul>
+    </li>
+    <li><b>Hardware Security Keys:</b>
+      <ul>
+        <li>USB or NFC-based keys like YubiKey</li>
+        <li>Used by journalists, activists, and companies for top-tier protection</li>
+        <li>Unphishable – requires physical access</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p></p>
+  <h3>1.4. Authentication Mistakes to Avoid</h3>
+  <ul>
+    <li><b>Don't reuse the same password</b> across multiple accounts</li>
+    <li><b>Don’t use SMS OTP if you can use an app</b> – SMS is vulnerable to SIM swapping</li>
+    <li><b>Don't ignore login alerts</b> – review unknown logins immediately</li>
+    <li><b>Don’t store passwords in plain text</b> – use a password manager</li>
+  </ul>
+
+  <p></p>
+  <h3>1.5. Best Practices for Safe Authentication</h3>
+  <ul>
+    <li>Use a mix of authentication factors (password + device + biometrics)</li>
+    <li>Enable MFA for all critical accounts</li>
+    <li>Use a reputable password manager (Bitwarden, 1Password, etc.)</li>
+    <li>Back up recovery codes for authenticator apps</li>
+    <li>Regularly audit active sessions and devices from your account settings</li>
+  </ul>
+
+  <p></p>
+  <h3>1.6. Real-World Example: Securing a University Email</h3>
+  <ul>
+    <li><b>Scenario:</b> UM student receives a fake email asking to log in to their UM mail</li>
+    <li><b>Without MFA:</b> Phisher gains access if student enters password</li>
+    <li><b>With MFA:</b> Attack fails – phisher can’t get the code from authenticator app</li>
+    <li><b>Lesson:</b> One extra layer can block serious account compromise</li>
+  </ul>
+
+  <p></p>
+  <h2>2. Key Takeaways & Core Learning Objectives</h2>
+  <ul>
+    <li>Understand different types of authentication factors</li>
+    <li>Recognize why multi-factor authentication (MFA) is crucial</li>
+    <li>Explore modern tools like passkeys and hardware tokens</li>
+    <li>Avoid common mistakes like password reuse and SMS-based 2FA</li>
+    <li>Apply safe authentication habits in academic and personal digital accounts</li>
+  </ul>
+</section>
+
+
+  </div>
+);
+
+
+
 const moduleTheory = {
   1: {
     title: 'Social Media Safety',
@@ -849,12 +1131,20 @@ const moduleTheory = {
     content: phishingTheory
   },
   3: {
-    title: 'Password Awareness',
+    title: 'Authentication',
     content: passwordAwarenessTheory
   },
   4: {
       title: 'Social Media Safety',
       content: socialMediaTheory2_0
+  },
+  5: {
+    title: 'Phishing',
+    content: phishingTheory2_0
+  },
+  6: {
+    title: 'Authentication',
+    content: authenticationTheory
   }
 };
 

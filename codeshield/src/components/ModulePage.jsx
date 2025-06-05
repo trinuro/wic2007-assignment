@@ -12,7 +12,7 @@ const moduleDescriptions = {
   2: 'Learn to identify and protect yourself from phishing attempts, scams, and social engineering attacks that try to steal your personal information.',
   3: 'Learn to create and manage strong, unique passwords, understand why reuse is dangerous, and use password managers to safeguard your personal information.',
   4: 'Learn about the risk on teenager loved social media platforms: Facebook, Rednote, TikTok, Instagram, etc.',
-  5: 'Learn about phishing 2.0',
+  5: 'Learn about phishing scams and how to spot fake job offers, tech support fraud, marketplace traps, and social media giveaways. Stay safe online with practical tips.',
   6: 'Learn about authentication'
 };
 
@@ -111,6 +111,13 @@ export default function ModulePage() {
           <p style={{ fontSize: '1.15rem', color: '#a8b2d1', marginBottom: '2rem' }}>
             {moduleDescriptions[5]}
           </p>
+          <button
+            className="courses-btn"
+            onClick={() => navigate('/courses/5')}
+            style={{ padding: '0.8rem 2rem', borderRadius: 8, background: '#64ffda', color: '#0a192f', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem' }}
+          >
+            Course
+          </button>
         </div>
       )}
       {moduleId === '3' && (
@@ -127,6 +134,13 @@ export default function ModulePage() {
           <p style={{ fontSize: '1.15rem', color: '#a8b2d1', marginBottom: '2rem' }}>
             {moduleDescriptions[6]}
           </p>
+          <button
+            className="courses-btn"
+            onClick={() => navigate('/courses/6')}
+            style={{ padding: '0.8rem 2rem', borderRadius: 8, background: '#64ffda', color: '#0a192f', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem' }}
+          >
+            Course
+          </button>
         </div>
       )}
     </div>

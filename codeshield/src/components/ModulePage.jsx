@@ -13,7 +13,7 @@ const moduleDescriptions = {
   3: 'Learn to create and manage strong, unique passwords, understand why reuse is dangerous, and use password managers to safeguard your personal information.',
   4: 'Learn about the risk on teenager loved social media platforms: Facebook, Rednote, TikTok, Instagram, etc.',
   5: 'Learn about phishing scams and how to spot fake job offers, tech support fraud, marketplace traps, and social media giveaways. Stay safe online with practical tips.',
-  6: 'Learn about authentication'
+  6: 'Learn about key authentication methods, why multi-factor authentication (MFA) matters, and how to protect your accounts with strong, modern security practices.'
 };
 
 export default function ModulePage() {

@@ -810,203 +810,177 @@ const phishingTheory2_0 = (
 const passwordAwarenessTheory = (
   <div>
     {/* Section 1 */}
-    <section className="course-section">
-      <h2>1. Message that Claiming Government Aid</h2>
-      <h3>1.1. How Phishers Exploit Trust and Emotions</h3>
+<section className="course-section">
+  <h2>1. What Makes a Strong Password?</h2>
+
+  <h3>1.1. Characteristics of a Strong Password</h3>
+  <ul>
+    <li><b>Length:</b> At least 12 characters; longer passwords are harder to crack.</li>
+    <li><b>Complexity:</b>
       <ul>
-        <li><b>Appeal to Authority (Government)</b>
-          <ul>
-            <li>Use of Malay terms like 'kerajaan' and 'Daulat Tuanku' to sound official</li>
-            <li>Claiming to be from the government for credibility</li>
-          </ul>
-        </li>
-        <li><b>Financial Incentive as a Lure</b>
-          <ul>
-            <li>Promises of free aid (e.g., RM 300) targeting economic hardship</li>
-            <li>Fear of missing out on government assistance</li>
-          </ul>
-        </li>
+        <li>Include uppercase, lowercase, numbers, and symbols</li>
+        <li>Avoid common substitutions (e.g., “P@ssw0rd!” is not strong enough)</li>
       </ul>
-      <p></p>
-      <h3>1.2. Recognizing a Fake (Phishing) Link</h3>
+    </li>
+    <li><b>Unpredictability:</b>
       <ul>
-        <li><b>URL Structure and Domain Mismatch</b>
-          <ul>
-            <li>Legitimate: bantuan.rakyat.gov.my</li>
-            <li>Phishing: b4ntuan-my-t3rk1ni-cvc07ru29.vercel.app</li>
-          </ul>
-        </li>
-        <li><b>Use of URL Shortening or Gibberish</b>
-          <ul>
-            <li>Long, confusing links</li>
-            <li>Irregular spellings like 't3rk1ni'</li>
-          </ul>
-        </li>
+        <li>No dictionary words, personal names, or dates</li>
+        <li>Use a random mix of characters (e.g., “Tx#7m%pZr!1LwQ”)</li>
       </ul>
-      <p></p>
-      <h3>1.3. Play on Cultural/Emotional Cues</h3>
-      <ul>
-        <li>Use of greetings like 'Salam' and phrases like 'Daulat Tuanku'</li>
-        <li>Manipulation using cultural respect norms</li>
-      </ul>
-      <p></p>
-      <h3>1.4. Best Practices for Messages Claiming Aid</h3>
-      <ul>
-        <li>Verify sender against official helplines</li>
-        <li>Do not click suspicious links</li>
-        <li>Cross-check via official 'gov.my' sites</li>
-        <li>Report and block suspicious senders</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 2 */}
-    <section className="course-section">
-      <h2>2. Common Signs of a Phishing Message</h2>
-      <h3>2.1. Phishing Tactics Overview</h3>
-      <ul>
-        <li>Credential harvesting through fake login pages</li>
-        <li>Use of urgency, fear, or rewards</li>
-      </ul>
-      <p></p>
-      <h3>2.2. Why 'Suspicious Links' Are the Main Red Flag</h3>
-      <ul>
-        <li>Tiny deviations in domain names</li>
-        <li>Misspellings like 'b4nkname-secure.com'</li>
-        <li>Personalized greetings do not prove legitimacy</li>
-      </ul>
-      <p></p>
-      <h3>2.3. Best Practices to Identify Phishing Signs</h3>
-      <ul>
-        <li>Hover or long-press to preview links</li>
-        <li>Check sender domains</li>
-        <li>Avoid urgent/threatening messages</li>
-        <li>Never enter credentials on third-party forms</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 3 */}
-    <section className="course-section">
-      <h2>3. Protecting Yourself from Phishing</h2>
-      <h3>3.1. Why Password Hygiene Matters</h3>
-      <ul>
-        <li>Never reuse passwords</li>
-        <li>Use complex and unique passwords</li>
-        <li>Use password managers</li>
-      </ul>
-      <p></p>
-      <h3>3.2. Role of Two-Factor Authentication (2FA)</h3>
-      <ul>
-        <li>Adds extra security layer</li>
-        <li>Prevents unauthorized access even with stolen passwords</li>
-      </ul>
-      <p></p>
-      <h3>3.3. Why Clicking Suspicious Links on Mobile Is Not Safer</h3>
-      <ul>
-        <li>Mobile sites can also be phishing pages</li>
-        <li>URL checks and security controls apply on mobile too</li>
-      </ul>
-      <p></p>
-      <h3>3.4. Best Practices for Phishing Prevention</h3>
-      <ul>
-        <li>Inspect all URLs carefully</li>
-        <li>Enable 2FA wherever possible</li>
-        <li>Verify before entering credentials</li>
-        <li>Use security software</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 4 */}
-    <section className="course-section">
-      <h2>4. Fake Bank Email Asking to Verify Account</h2>
-      <h3>4.1. How to Spot a Phony Bank Email</h3>
-      <ul>
-        <li>Sender domain doesn't match official bank</li>
-        <li>Urgent language like 'Frozen Account'</li>
-      </ul>
-      <p></p>
-      <h3>4.2. Why Replying or Clicking Is Dangerous</h3>
-      <ul>
-        <li>Confirms your email is active</li>
-        <li>Links harvest your credentials</li>
-      </ul>
-      <p></p>
-      <h3>4.3. Best Response Strategy</h3>
-      <ul>
-        <li>Do not reply or click links</li>
-        <li>Access bank website directly</li>
-        <li>Check for domain spoofing</li>
-        <li>Report to bank's fraud department</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 5 */}
-    <section className="course-section">
-      <h2>5. Fake Google Suspension Email</h2>
-      <h3>5.1. Anatomy of a Legitimate Google Security Email</h3>
-      <ul>
-        <li>Official Google domains like 'accounts.google.com'</li>
-        <li>Proper URLs like 'https://myaccount.google.com/'</li>
-      </ul>
-      <p></p>
-      <h3>5.2. Why the URL Is the Red Flag</h3>
-      <ul>
-        <li>Fake links use 'support.google.com.my'</li>
-        <li>Google never uses country-specific domains for verification</li>
-      </ul>
-      <p></p>
-      <h3>5.3. Best Practice When Receiving 'Account Suspended' Emails</h3>
-      <ul>
-        <li>Navigate manually to 'myaccount.google.com'</li>
-        <li>Check full email headers</li>
-        <li>Enable Gmail phishing detection</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 6 */}
-    <section className="course-section">
-      <h2>6. Phone Scam Involving False Police Threats</h2>
-      <h3>6.1. Understanding Voice/Phone Phishing ('Vishing') and Social Engineering</h3>
-      <ul>
-        <li>Authority abuse</li>
-        <li>Urgency and fear tactics</li>
-        <li>Secrecy instructions</li>
-      </ul>
-      <p></p>
-      <h3>6.2. Why 'Keep It Secret' Is a Classic Scam Tactic</h3>
-      <ul>
-        <li>Isolation weakens victim's defense</li>
-        <li>Pressure maintained over time</li>
-        <li>Avoids involvement of others</li>
-      </ul>
-      <p></p>
-      <h3>6.3. Other Common Phone/Voice Scam Red Flags</h3>
-      <ul>
-        <li>Caller ID spoofing</li>
-        <li>Lack of official documentation</li>
-        <li>Unusual payment requests</li>
-        <li>No verifiable proof</li>
-      </ul>
-      <p></p>
-      <h3>6.4. Best Practices to Avoid Vishing Scams</h3>
-      <ul>
-        <li>Hang up and call official lines</li>
-        <li>Tell a trusted adult</li>
-        <li>Never transfer money without verifying</li>
-        <li>Use call-blocking and report scams</li>
-      </ul>
-    </section>
-    <p></p>
-    {/* Section 7 */}
-    <section className="course-section">
-      <h2>7. Key Takeaways & Core Learning Objectives</h2>
-      <ul>
-        <li>Detect government-themed phishing messages</li>
-        <li>Identify red flags in suspicious URLs</li>
-        <li>Adopt 2FA and good password practices</li>
-        <li>Verify bank and Google emails by domain</li>
-        <li>Understand vishing and isolation scams</li>
-      </ul>
-    </section>
+    </li>
+  </ul>
+
+  <h3>1.2. Comparing Password Examples</h3>
+  <ul>
+    <li><b>“12345678”:</b> Very weak – sequential and common.</li>
+    <li><b>“password123”:</b> Weak – uses a dictionary word and common number suffix.</li>
+    <li><b>“John2005”:</b> Weak – uses name and birth year; easy to guess.</li>
+    <li><b>“G!v3M3$3cur1ty!”:</b> Strong – 15 characters, complex, and unpredictable.</li>
+  </ul>
+
+  <h3>1.3. What to Avoid When Creating a Password</h3>
+  <ul>
+    <li><b>Avoid personal information:</b> Names, birthdates, pet names.</li>
+    <li><b>Avoid common patterns:</b> “abcd1234”, “qwerty”, “1111aaaa”.</li>
+    <li><b>Avoid common substitutions:</b> Like “0” for “o” or “@” for “a”.</li>
+  </ul>
+</section>
+<p></p>
+{/* Section 2 */}
+<section className="course-section">
+  <h2>2. Risk of Reusing the Same Password</h2>
+
+  <h3>2.1. Credential Stuffing Explained</h3>
+  <ul>
+    <li>Hackers use stolen credentials from one site on others.</li>
+    <li>One weak link can give attackers access to multiple accounts.</li>
+    <li>If “MyPassword!23” is reused and one site is breached, all sites are at risk.</li>
+  </ul>
+
+  <h3>2.2. Best Practice: Use Unique Passwords</h3>
+  <ul>
+    <li>Each account should have its own password.</li>
+    <li>Use a password manager to generate and store secure passwords.</li>
+    <li>Change passwords immediately if a service you use is breached.</li>
+  </ul>
+</section>
+
+<p></p>
+{/* Section 3 */}
+<section className="course-section">
+  <h2>3. Understanding Two-Factor Authentication (2FA)</h2>
+
+  <h3>3.1. Types of Authentication Factors</h3>
+  <ul>
+    <li><b>Something You Know:</b> Passwords, PINs.</li>
+    <li><b>Something You Have:</b> Authenticator app, SMS code, security key.</li>
+    <li><b>Something You Are:</b> Biometric data – fingerprint, facial scan.</li>
+  </ul>
+
+  <h3>3.2. How 2FA Works</h3>
+  <ul>
+    <li>Step 1: Enter your password.</li>
+    <li>Step 2: Verify with a second factor (e.g., SMS code or app code).</li>
+    <li>Login is successful only if both steps are completed.</li>
+  </ul>
+
+  <h3>3.3. Benefits of 2FA</h3>
+  <ul>
+    <li>Protects against phishing and keylogging.</li>
+    <li>Stops attackers using reused passwords from breaches.</li>
+    <li>Prevents unauthorized logins even if your password is stolen.</li>
+  </ul>
+</section>
+<p></p>
+{/* Section 4 */}
+<section className="course-section">
+  <h2>4. What to Avoid When Creating a Password</h2>
+
+  <h3>4.1. Personal Information is Predictable</h3>
+  <ul>
+    <li>Birthdates, names, anniversaries are easy to find or guess.</li>
+    <li>Attackers use social media and public records to find clues.</li>
+  </ul>
+
+  <h3>4.2. Avoid Weak Patterns</h3>
+  <ul>
+    <li>No names, pet names, or personal facts in passwords.</li>
+    <li>Avoid simple sequences like “abc123” or “qwerty”.</li>
+    <li>Use a random generator instead of manually created passwords.</li>
+  </ul>
+</section>
+<p></p>
+{/* Section 5 */}
+<section className="course-section">
+  <h2>5. How Often to Change Your Password</h2>
+
+  <h3>5.1. Recommended Frequency</h3>
+  <ul>
+    <li><b>Every 6–12 months</b> for important accounts (email, banking, work).</li>
+    <li>Less frequently for low-risk accounts, but review annually.</li>
+    <li>Avoid daily changes — leads to weak, predictable patterns.</li>
+  </ul>
+
+  <h3>5.2. Change Passwords Immediately If:</h3>
+  <ul>
+    <li>A service you use is breached.</li>
+    <li>You notice suspicious login activity.</li>
+    <li>Your device is lost or stolen.</li>
+  </ul>
+
+  <h3>5.3. Best Practice</h3>
+  <ul>
+    <li>Keep recovery methods updated (email and phone number).</li>
+    <li>Use unique passwords for every account to avoid mass compromise.</li>
+  </ul>
+</section>
+<p></p>
+{/* Section 6 */}
+<section className="course-section">
+  <h2>6. Understanding Password Managers</h2>
+
+  <h3>6.1. Why Use One?</h3>
+  <ul>
+    <li>Humans can’t remember 20+ unique, complex passwords.</li>
+    <li>Password managers generate and store secure passwords for every site.</li>
+  </ul>
+
+  <h3>6.2. How They Work</h3>
+  <ul>
+    <li><b>Master Password:</b> One strong password unlocks your vault.</li>
+    <li><b>Vault & Encryption:</b> Data is encrypted and secure.</li>
+    <li><b>Auto-fill & Save:</b> Automatically fills in credentials on websites.</li>
+  </ul>
+
+  <h3>6.3. Examples of Password Managers</h3>
+  <ul>
+    <li>Bitwarden (free, open source)</li>
+    <li>1Password, Dashlane, LastPass</li>
+    <li>KeePass (local, offline, technical setup)</li>
+  </ul>
+
+  <h3>6.4. Benefits</h3>
+  <ul>
+    <li>Only need to remember one password.</li>
+    <li>Stronger, random password generation.</li>
+    <li>Secure sharing of credentials when needed.</li>
+    <li>Syncs across devices with extensions and mobile apps.</li>
+  </ul>
+</section>
+<p></p>
+{/* Section 7 */}
+<section className="course-section">
+  <h2>7. Core Learning Objectives</h2>
+  <ul>
+    <li>Know the traits of a strong password (length, complexity, randomness)</li>
+    <li>Understand the danger of password reuse and credential stuffing</li>
+    <li>Explain how two-factor authentication (2FA) works and why it's important</li>
+    <li>Identify and avoid weak password creation patterns</li>
+    <li>Rotate passwords for critical accounts every 6–12 months</li>
+    <li>Use a password manager to generate and store secure credentials</li>
+  </ul>
+</section>
+
   </div>
 );
 

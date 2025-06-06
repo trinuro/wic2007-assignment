@@ -1,33 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Your 6 modules
 const moduleInfo = {
   1: {
-    name: "Social Media Safety",
+    name: "Social Media Safety - lesson 1",
     description: "Protecting yourself on social media platforms",
     icon: "🔒"
   },
   2: {
-    name: "Phishing",
+    name: "Phishing - lesson 1",
     description: "Identifying and avoiding online scams",
     icon: "🎣"
   },
   3: {
-    name: "Digital Defense",
-    description: "Advanced cybersecurity techniques",
-    icon: "⚔️"
+    name: "Authentication - lesson 1",
+    description: "Understanding secure login methods",
+    icon: "🔑"
+  },
+  4: {
+    name: "Social Media Safety - lesson 2",
+    description: "Advanced social media privacy settings",
+    icon: "🔒"
+  },
+  5: {
+    name: "Phishing - lesson 2",
+    description: "Spotting sophisticated scam emails",
+    icon: "🎣"
+  },
+  6: {
+    name: "Authentication - lesson 2",
+    description: "Using two-factor authentication (2FA)",
+    icon: "🔑"
   }
 };
 
+// Define the special certificate for course completion
+const certificateInfo = {
+  name: "Cybersecurity Graduate",
+  description: "Congratulations! You have mastered all cybersecurity lessons.",
+  icon: "🎓" // A graduation cap icon
+};
+
+
 function AchievementsPage() {
   const navigate = useNavigate();
+  // State for the individual badges
   const [achievements, setAchievements] = useState([]);
+  // State for the final certificate, if earned
+  const [certificate, setCertificate] = useState(null);
 
   useEffect(() => {
-    // Load completed modules and their badges from localStorage
+    // 1. Process individual badges (same as your code)
     const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
-    
-    // Transform the completed modules data into achievements array
     const achievementsData = Object.entries(completedModules).map(([moduleId, data]) => ({
       moduleId,
       badge: data.badge,
@@ -36,10 +61,33 @@ function AchievementsPage() {
       completedAt: new Date(data.completedAt),
       percentage: Math.round((data.score / data.totalQuestions) * 100)
     }));
-
-    // Sort by completion date (most recent first)
     achievementsData.sort((a, b) => b.completedAt - a.completedAt);
     setAchievements(achievementsData);
+
+    // 2. Check for full course completion to award the certificate
+    const totalModules = Object.keys(moduleInfo).length;
+    const numCompleted = Object.keys(completedModules).length;
+
+    if (numCompleted >= totalModules) {
+      // Calculate total score and total possible questions
+      const totalScore = achievementsData.reduce((sum, data) => sum + data.score, 0);
+      const totalQuestions = achievementsData.reduce((sum, data) => sum + data.totalQuestions, 0);
+
+      // Find the most recent completion date
+      const latestCompletionDate = new Date(
+        Math.max(...achievementsData.map(data => data.completedAt))
+      );
+
+      // Create the final certificate object
+      setCertificate({
+        ...certificateInfo,
+        totalScore,
+        totalQuestions,
+        completedAt: latestCompletionDate,
+        percentage: Math.round((totalScore / totalQuestions) * 100) || 0
+      });
+    }
+
   }, []);
 
   const formatDate = (date) => {
@@ -58,10 +106,33 @@ function AchievementsPage() {
           <p>Showcase of your cybersecurity learning journey</p>
         </div>
 
+        {/* Display the final certificate if the course is complete */}
+        {certificate && (
+          <div className="certificate-section">
+            <div className="badge-card certificate-card"> {/* Added 'certificate-card' for special styling */}
+                <div className="badge-icon-large">
+                  {certificate.icon}
+                </div>
+                <h3>{certificate.name}</h3>
+                <p className="badge-description">
+                  {certificate.description}
+                </p>
+                <p className="badge-date">
+                  Course completed on {formatDate(certificate.completedAt)}
+                </p>
+                <div className="badge-score">
+                  Total Score: {certificate.totalScore}/{certificate.totalQuestions} ({certificate.percentage}%)
+                </div>
+            </div>
+            <hr className="section-divider" />
+          </div>
+        )}
+
+        {/* Display the grid of earned badges */}
         {achievements.length === 0 ? (
           <div className="no-achievements">
             <h2>No Badges Yet</h2>
-            <h2>Complete modules to earn badges and track your progress!</h2>
+            <h2>Complete lessons to earn badges and track your progress!</h2>
             <br />
             <button 
               className="start-btn"
@@ -72,6 +143,7 @@ function AchievementsPage() {
           </div>
         ) : (
           <div className="badges-showcase">
+            {certificate && <h4>Your Earned Badges</h4>} {/* Add a title if certificate is also shown */}
             <div className="badges-grid">
               {achievements.map((achievement, index) => {
                 const module = moduleInfo[achievement.moduleId];
@@ -80,13 +152,12 @@ function AchievementsPage() {
                     <div className="badge-icon-large">
                       {achievement.badge.icon}
                     </div>
-                    <h3>{achievement.badge.name}</h3>
-                    <div className="module-info">
-                      <span className="module-icon">{module?.icon}</span>
-                      <p className="module-name">
-                        {module?.name || 'Unknown Module'}
-                      </p>
-                    </div>
+                    {/* The lesson name is the main title */}
+                    <h3>{module?.name || 'Unknown Module'}</h3>
+                    
+                    {/* The specific badge title is a subtitle */}
+                    <p className="badge-tier-name">{achievement.badge.name}</p>
+                    
                     <p className="badge-description">
                       {module?.description}
                     </p>
@@ -114,4 +185,4 @@ function AchievementsPage() {
   );
 }
 
-export default AchievementsPage; 
+export default AchievementsPage;

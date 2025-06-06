@@ -20,7 +20,7 @@ const modules = [
     id: 3,
     title: "Authentication",
     //description: "Learn to create and manage strong, understand why reuse is dangerous, and use password managers to safeguard your personal information.",
-    icon: "⚔️",
+    icon: "🔑",
     difficulty: "Advanced",
   }
 ]
@@ -74,7 +74,7 @@ function DashboardPage() {
             >
               <span className="trophy-icon">🏆</span>
               <span>View Achievements</span>
-              <span className="badge-count">{earnedBadges.length}</span>
+              <span className="badge-count">{completedModules.length}</span>
             </button>
           </div>
         </div>
@@ -85,9 +85,9 @@ function DashboardPage() {
               key={module.id} 
               className={`module-card ${module.comingSoon ? 'coming-soon' : ''} ${completedModules.includes(module.id) ? 'completed' : ''}`}
             >
-              {completedModules.includes(module.id) && (
+              {/* {completedModules.includes(module.id) && (
                 <div className="completion-mark">✓</div>
-              )}
+              )} */}
               <div className="module-icon">{module.icon}</div>
               <h3>{module.title}</h3>
               <p>{module.description}</p>

@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+// UPDATED: Now contains definitions for all 6 modules.
 const badges = {
-  1: {  // Social Media Safety Module
+  1: {  // Social Media Safety - lesson 1
     gold: {
       name: "Social Media Guardian",
       icon: "🔒",
@@ -19,7 +20,7 @@ const badges = {
       description: "Good start on social media safety!"
     }
   },
-  2: {  // Phishing Module
+  2: {  // Phishing - lesson 1
     gold: {
       name: "Phishing Expert",
       icon: "🎣",
@@ -36,21 +37,73 @@ const badges = {
       description: "Learning to spot online threats!"
     }
   },
-  3: {  // Digital Defense Module (for future use)
+  3: {  // Authentication - lesson 1
     gold: {
-      name: "Cyber Warrior",
-      icon: "⚔️",
-      description: "Master of digital defense!"
+      name: "Authentication Master",
+      icon: "🔑",
+      description: "Master of secure authentication!"
     },
     silver: {
-      name: "Security Sentinel",
+      name: "Access Controller",
       icon: "🛡️",
-      description: "Strong defender of digital assets!"
+      description: "Strong understanding of access control!"
     },
     bronze: {
-      name: "Defense Initiate",
+      name: "Login Learner",
       icon: "🎯",
-      description: "Beginning the path of cyber defense!"
+      description: "Beginning the path of secure logins!"
+    }
+  },
+  // --- NEW BADGES ADDED BELOW ---
+  4: {  // Social Media Safety - lesson 2 (Same badges as module 1)
+    gold: {
+      name: "Social Media Guardian",
+      icon: "🔒",
+      description: "Master of social media safety!"
+    },
+    silver: {
+      name: "Privacy Protector",
+      icon: "🛡️",
+      description: "Strong understanding of online privacy!"
+    },
+    bronze: {
+      name: "Safety Apprentice",
+      icon: "📱",
+      description: "Good start on social media safety!"
+    }
+  },
+  5: {  // Phishing - lesson 2 (Same badges as module 2)
+    gold: {
+      name: "Phishing Expert",
+      icon: "🎣",
+      description: "Master at detecting phishing attempts!"
+    },
+    silver: {
+      name: "Scam Detector",
+      icon: "🔍",
+      description: "Good at identifying online scams!"
+    },
+    bronze: {
+      name: "Security Novice",
+      icon: "🌟",
+      description: "Learning to spot online threats!"
+    }
+  },
+  6: {  // Authentication - lesson 2 (Same badges as module 3)
+    gold: {
+      name: "Authentication Master",
+      icon: "🔑",
+      description: "Master of secure authentication!"
+    },
+    silver: {
+      name: "Access Controller",
+      icon: "🛡️",
+      description: "Strong understanding of access control!"
+    },
+    bronze: {
+      name: "Login Learner",
+      icon: "🎯",
+      description: "Beginning the path of secure logins!"
     }
   }
 };
@@ -61,6 +114,7 @@ const PASS_PERCENTAGE = 60;
 function ResultPage() {
   const navigate = useNavigate();
   const location = useLocation();
+  // The rest of the component remains exactly the same.
   const { score, totalQuestions, moduleId } = location.state || {};
 
   useEffect(() => {
@@ -68,12 +122,12 @@ function ResultPage() {
       const percentage = (score / totalQuestions) * 100;
       const passed = percentage >= PASS_PERCENTAGE;
       
-      // Calculate badge based on score
       const badge = calculateBadge(score, totalQuestions);
       
-      // Get existing data from localStorage
       const completedModules = JSON.parse(localStorage.getItem('completedModules') || '{}');
-      const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges') || '[]');
+      // Note: We are no longer using 'earnedBadges'. The 'completedModules' object
+      // now contains all the necessary info, including the badge.
+      // This simplifies the logic. Let's stick with just `completedModules`.
       
       if (passed) {
         // Only update completed modules if the user passed
@@ -82,45 +136,40 @@ function ResultPage() {
           totalQuestions,
           completedAt: new Date().toISOString(),
           percentage,
-          badge,
+          badge, // The badge object is now stored here
           passed: true
         };
         
-        // Remove any existing badges for this module
-        const filteredBadges = earnedBadges.filter(b => b.moduleId !== moduleId);
-        
-        // Add the new badge
-        filteredBadges.push({
-          ...badge,
-          moduleId,
-          earnedAt: new Date().toISOString(),
-          score: percentage
-        });
-        
-        // Save both to localStorage
         localStorage.setItem('completedModules', JSON.stringify(completedModules));
-        localStorage.setItem('earnedBadges', JSON.stringify(filteredBadges));
+
       } else {
-        // If not passed, store the attempt but mark as not passed
+        // If not passed, you might want to store the attempt or not.
+        // Storing it allows tracking attempts, but let's only store passed modules
+        // for a cleaner `completedModules` object. You can uncomment this if needed.
+        /*
         completedModules[moduleId] = {
           score,
           totalQuestions,
           completedAt: new Date().toISOString(),
           percentage,
-          badge,
+          badge: null, // No badge earned
           passed: false
         };
         localStorage.setItem('completedModules', JSON.stringify(completedModules));
+        */
       }
     }
-  }, [score, totalQuestions, moduleId]);
+  }, [score, totalQuestions, moduleId, navigate]);
 
   const calculateBadge = (score, total) => {
+    if (!moduleId) return null; // Guard against missing moduleId
     const percentage = (score / total) * 100;
-    const moduleBadges = badges[moduleId] || badges[1]; // Default to module 1 badges if moduleId not found
+    // This line already handles the new modules perfectly!
+    const moduleBadges = badges[moduleId] || badges[1]; 
     if (percentage >= 80) return moduleBadges.gold;
     if (percentage >= 60) return moduleBadges.silver;
-    return moduleBadges.bronze;
+    // Note: We only award a badge if they pass (>= 60%). Bronze is no longer the "fail" badge.
+    return null; // Return null if score is below 60%
   };
 
   const handleRetry = () => {
@@ -131,11 +180,12 @@ function ResultPage() {
     navigate('/dashboard');
   };
 
-  if (typeof score !== 'number' || !totalQuestions) {
+  if (typeof score !== 'number' || !totalQuestions || !moduleId) {
     return (
       <div className="result-page">
         <div className="result-card">
           <h1>No Results Available</h1>
+          <p>Please go back to the dashboard and start a quiz.</p>
           <button onClick={handleBackToDashboard} className="dashboard-btn">Back to Dashboard</button>
         </div>
       </div>
@@ -159,7 +209,8 @@ function ResultPage() {
           <div className="percentage">{percentage}%</div>
         </div>
 
-        {badge && (
+        {/* Show badge section only if a badge was earned (i.e., they passed) */}
+        {passed && badge && (
           <div className="badge-section">
             <div className="badge">
               <span className="badge-icon">{badge.icon}</span>
@@ -189,4 +240,4 @@ function ResultPage() {
   );
 }
 
-export default ResultPage; 
+export default ResultPage;

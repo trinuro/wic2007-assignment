@@ -102,6 +102,13 @@ function AchievementsPage() {
             </div>
           </div>
         )}
+        <div style={{ height: "1.5em" }} />
+        <button 
+          className="back-btn"
+          onClick={() => navigate('/dashboard')}
+        >
+          Back to Dashboard
+        </button>
       </div>
     </div>
   );

@@ -60,8 +60,9 @@ function AchievementsPage() {
 
         {achievements.length === 0 ? (
           <div className="no-achievements">
-            <h3>No Badges Yet</h3>
-            <p>Complete modules to earn badges and track your progress!</p>
+            <h2>No Badges Yet</h2>
+            <h2>Complete modules to earn badges and track your progress!</h2>
+            <br />
             <button 
               className="start-btn"
               onClick={() => navigate('/dashboard')}
@@ -101,13 +102,6 @@ function AchievementsPage() {
             </div>
           </div>
         )}
- <p></p>
-        <button 
-          className="back-btn"
-          onClick={() => navigate('/dashboard')}
-        >
-          Back to Dashboard
-        </button>
       </div>
     </div>
   );

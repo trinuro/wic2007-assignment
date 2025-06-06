@@ -5,7 +5,8 @@ const socialMediaTheory = (
   <div>
     {/* Section 1 */}
     <section className="course-section">
-      <h2>1. Unknown Friend Request with a Personal Compliment</h2>
+      <h2>1. Unknown Friend Request</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>1.1 The Nature of Stranger Requests on Social Media</h3>
       <ul>
         <li><b>Incomplete Profile as a Red Flag</b>
@@ -23,7 +24,7 @@ const socialMediaTheory = (
         </li>
       </ul>
 
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.2 Key Takeaways</h3>
       <ul>
         <li><b>Only Accept Requests from Known or Verifiable Contacts</b>
@@ -47,10 +48,12 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    
+    <br />
     {/* Section 2 */}
     <section className="course-section">
       <h2>2. Real-Time Location Sharing</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>2.1 What Is Real-Time Location Sharing?</h3>
       <ul>
         <li><b>How It Works</b>
@@ -66,7 +69,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>2.2 Risks of Broadcasting Your Exact Location</h3>
       <ul>
         <li><b>Physical Safety Threat</b>
@@ -90,7 +93,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>2.3 Best Practice</h3>
       <ul>
         <li><b>Never Enable Real-Time Location Sharing with Broad Groups</b>
@@ -106,10 +109,11 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 3 */}
     <section className="course-section">
       <h2>3. Suspicious "Free Concert Tickets" Ad</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>3.1 How Phishing & Fake Promotions Operate on Social Media</h3>
       <ul>
         <li><b>Sponsored Posts & Boosted Ads</b>
@@ -126,7 +130,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>3.2 Verification Steps Before Clicking</h3>
       <ul>
         <li><b>Check the Promoter's Official Channels</b>
@@ -145,7 +149,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>3.3 Best Practice</h3>
       <ul>
         <li><b>Always Research the Promoter's Official Site First</b>
@@ -155,10 +159,11 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 4 */}
     <section className="course-section">
       <h2>4. Grooming Indicator: Asking to Move to Private Chat</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>4.1 Understanding Online Grooming in Social Media Contexts</h3>
       <ul>
         <li><b>Definition of Grooming</b>
@@ -172,7 +177,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>4.2 Grooming Red Flags</h3>
       <ul>
         <li><b>"Let's Chat on [Other App]"</b>
@@ -196,7 +201,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>4.3 Best Practice</h3>
       <ul>
         <li><b>Recognize That Moving to Private Chat Is a Grooming Tactic</b>
@@ -207,10 +212,11 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 5 */}
     <section className="course-section">
       <h2>5. Verifying an Online Stranger's Identity</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>5.1 Why "Profile Alone" Is Not Enough</h3>
       <ul>
         <li><b>Fake Accounts & Impersonation</b>
@@ -220,7 +226,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>5.2 Verification Techniques</h3>
       <ul>
         <li><b>Mutual Connections & Background Checks</b>
@@ -245,7 +251,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>5.3 Best Practice</h3>
       <ul>
         <li><b>Check Mutual Connections and Reputable Sources</b>
@@ -255,10 +261,11 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 6 */}
     <section className="course-section">
       <h2>6. Stranger Who Compliments Relentlessly & Wants to Be "Best Friends"</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>6.1 Why Excessive Flattery Is Dangerous Online</h3>
       <ul>
         <li><b>Emotional Manipulation Through Compliments</b>
@@ -272,7 +279,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>6.2 Defense Strategies</h3>
       <ul>
         <li><b>Maintain Boundaries</b>
@@ -297,7 +304,7 @@ const socialMediaTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>6.3 Best Practice</h3>
       <ul>
         <li><b>Politely Decline & Block</b>
@@ -307,10 +314,11 @@ const socialMediaTheory = (
         </li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 7 */}
     <section className="course-section">
-      <h3>7. Bringing It All Together: Core Learning Objectives</h3>
+      <h2>7. Bringing It All Together: Core Learning Objectives</h2>
+      <div style={{ height: "0.5em" }} />
       <ul>
         <li>Distinguish Between Genuine vs. Malicious Connection Attempts: Use profile‐audit techniques (mutual friends, posting history, reverse‐image search) to decide if a request is legitimate.</li>
         <li>Guard Location Data as Privileged Information: Understand that "real-time location sharing" can expose you to stalking; only enable it under tight restrictions.</li>
@@ -326,8 +334,8 @@ const socialMediaTheory = (
 const socialMediaTheory2_0 = (
   <div>
     <section className="course-section">
-      <h2>1.Understanding the Risks Behind the Platforms You Love</h2>
-
+      <h2>1. Social Media Platform Risks Explained</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>1.1 Facebook – Profile Stalking and Hidden Data Exposure</h3>
       <b>What Teens Do: </b>Share life updates, school info, and join groups.
       <p> </p>
@@ -344,7 +352,7 @@ const socialMediaTheory2_0 = (
         <li>Leave sketchy public groups.</li>
         <li>Use "View As" to simulate a stranger's view of your profile.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.2 Instagram – Fake Influencers and Bot Comments</h3>
       <b>What Teens Do:</b> Follow trends, post reels, interact with influencers.
       <p></p>
@@ -361,7 +369,7 @@ const socialMediaTheory2_0 = (
         <li>Audit "Close Friends" list monthly.</li>
         <li>Avoid clicking external links in comment sections.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.3 TikTok – Misinformation and Dangerous Challenges</h3>
       <b>What Teens Do:</b> Scroll FYP, post challenges, watch duets/stitches.
       <p></p>
@@ -378,16 +386,17 @@ const socialMediaTheory2_0 = (
         <li>Research before participating in trends.</li>
         <li>Think before posting—the internet is forever.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.4 Unknown Apps – Privacy Risks and Fake Anonymity</h3>
       <b>What Teens Do:</b> Explore lesser-known apps to escape parental oversight.
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <b>Risks:</b>
       <ul>
         <li>Weak moderation invites harassment.</li>
         <li>Anonymous Q&A features used for bullying.</li>
         <li>Data often retained even after deletion.</li>
       </ul>
+      <div style={{ height: "0.5em" }} />
       <b>Safe Practices:</b>
       <ul>
         <li>Avoid apps not listed in official stores.</li>
@@ -395,7 +404,7 @@ const socialMediaTheory2_0 = (
         <li>Check app permissions.</li>
         <li>Read privacy policies—know where your data goes.</li>
       </ul>
-      <p></p>
+      <br />    
       <h2>2. Trends That Seem Safe But Aren't</h2>
       <ul>
         <li>Story Polls/Q&As: Used to manipulate or profile users.</li>
@@ -403,7 +412,7 @@ const socialMediaTheory2_0 = (
         <li>Add Yours Stickers: Encourage oversharing.</li>
         <li>Follow-for-Follow Chains: Increase exposure to bots and scammers.</li>
       </ul>
-      <p></p>
+      <br />
       <h2>3. Universal Smart Safety Habits</h2>
       <ul>
         <li>Perform a privacy check monthly.</li>
@@ -412,7 +421,7 @@ const socialMediaTheory2_0 = (
         <li>Use strong, unique passwords with a password manager.</li>
         <li>Pause and reflect: "Could this be used against me?"</li>
       </ul>
-      <p></p>
+      <br />
       <h2>4. Situational Safety Scenarios</h2>
       <ul>
         <li><b>Unknown Friend Request with a Personal Compliment:</b> Check for incomplete profiles, excessive flattery, and lack of mutual connections. <i>Action:</i> Decline or block unsolicited requests.</li>
@@ -424,9 +433,9 @@ const socialMediaTheory2_0 = (
       </ul>
     </section>
 
-    <p></p>
+    <br />
 
-    <h3>Learning Objectives</h3>
+    <h2>Learning Objectives</h2>
       <ul>
         <li>Recognize platform-specific risks across popular social media apps.</li>
         <li>Apply privacy settings and safety features unique to each platform.</li>
@@ -441,6 +450,7 @@ const phishingTheory = (
     {/* Section 1 */}
     <section className="course-section">
       <h2>1. Message Claiming Government Aid</h2>
+      <div style={{ height: "0.5em" }} />
       <h3>1.1 How Phishers Exploit Trust and Emotions</h3>
       <ul>
         <li><b> Appeal to Authority (Government)</b>
@@ -457,7 +467,7 @@ const phishingTheory = (
           </ul>
         </li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.2 Recognizing a Fake (Phishing) Link</h3>
       <ul>
         <li>Official Malaysian government URLs end in '.gov.my'.</li>
@@ -465,13 +475,13 @@ const phishingTheory = (
         <li>URLs may be long, gibberish, or shortened to mask malicious intent.</li>
         <li>Hover (desktop) or long-press (mobile) to preview true URLs before clicking.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.3 Play on Cultural/Emotional Cues</h3>
       <ul>
         <li>Scammers use greetings like 'Salam' and phrases like 'Daulat Tuanku' to sound respectful and official.</li>
         <li>These cues exploit cultural respect to lower skepticism.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>1.4 Best Practices for Messages Claiming Aid</h3>
       <ul>
         <li>Verify sender identity through official sources.</li>
@@ -480,7 +490,7 @@ const phishingTheory = (
         <li>Report and block suspicious WhatsApp messages.</li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 2 */}
     <section className="course-section">
       <h2>2. Common Signs of a Phishing Message</h2>
@@ -489,7 +499,7 @@ const phishingTheory = (
         <li>Trick users into entering login info on fake pages.</li>
         <li>Use fear, urgency, or rewards to manipulate users.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>2.2 Why Suspicious Links Are the Main Red Flag</h3>
       <ul>
         <li>Official domains are clear and accurate (e.g., apple.com).</li>
@@ -497,7 +507,7 @@ const phishingTheory = (
         <li>Personalized greetings can be spoofed.</li>
         <li>Tips or update notifications are only harmful if they include malicious links.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>2.3 Best Practices to Identify Phishing Signs</h3>
       <ul>
         <li>Preview links before clicking.</li>
@@ -507,7 +517,7 @@ const phishingTheory = (
         <li>Never enter credentials on third-party forms.</li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 3 */}
     <section className="course-section">
       <h2>3. Protecting Yourself from Phishing</h2>
@@ -516,20 +526,20 @@ const phishingTheory = (
         <li>Never reuse passwords—compromise in one place affects all accounts.</li>
         <li>Use a password manager to store complex passwords.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>3.2 Role of Two-Factor Authentication (2FA)</h3>
       <ul>
         <li>2FA adds an extra layer of security.</li>
         <li>Even if passwords are leaked, attackers can't access accounts without second proof.</li>
         <li>Turning off 2FA increases vulnerability.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>3.3  Why Clicking Suspicious Links on Mobile Is Not Safer</h3>
       <ul>
         <li>Mobile pages can mimic legitimate apps and sites.</li>
         <li>Security checks work similarly across desktop and mobile.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>3.4 Best Practices for Phishing Prevention</h3>
       <ul>
         <li>Inspect all links regardless of platform.</li>
@@ -538,7 +548,7 @@ const phishingTheory = (
         <li>Use antivirus and browser protections to flag phishing sites.</li>
       </ul>
     </section>
-    <p></p>
+      <br />
     {/* Section 4 */}
     <section className="course-section">
       <h2>4. Fake Bank Email Asking to Verify Account</h2>
@@ -548,13 +558,13 @@ const phishingTheory = (
         <li>Look out for letter swaps and added words in domain (e.g., 'b4nk-secure-help.com').</li>
         <li>Threats like 'Frozen Account' are designed to cause panic.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>4.2 Why Replying or Clicking Is Dangerous</h3>
       <ul>
         <li>Replying confirms your email is active—invites more phishing.</li>
         <li>Clicking leads to fake login pages that harvest your credentials.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>4.3 Best Response Strategy</h3>
       <ul>
         <li>Ignore or delete phishing emails.</li>
@@ -563,7 +573,7 @@ const phishingTheory = (
         <li>Optionally forward phishing emails to the bank's fraud team.</li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 5 */}
     <section className="course-section">
       <h2>5. Fake Google Suspension Email</h2>
@@ -573,13 +583,13 @@ const phishingTheory = (
         <li>Legit URLs use 'accounts.google.com' or 'myaccount.google.com'.</li>
         <li>Rarely use 'support.google.com.my' for verification.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>5.2 Why the URL Is the Red Flag</h3>
       <ul>
         <li>'support.google.com.my' is only for local help articles, not verification.</li>
         <li>Real account warnings use in-app or email with benign 'Review Activity' buttons.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>5.3 Best Practice When Receiving 'Account Suspended' Emails</h3>
       <ul>
         <li>Manually go to 'myaccount.google.com'.</li>
@@ -588,7 +598,7 @@ const phishingTheory = (
         <li>Rely on Gmail's phishing detection warnings.</li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 6 */}
     <section className="course-section">
       <h2>6. Phone Scam Involving False Police Threats</h2>
@@ -597,13 +607,13 @@ const phishingTheory = (
         <li>Uses phone calls to steal info via impersonation and fear.</li>
         <li>Common tactics: pretending to be police, urgency, secrecy.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>6.2 Why 'Keep It Secret' Is a Classic Scam Tactic</h3>
       <ul>
         <li>Isolates victim to prevent verification with trusted adults.</li>
         <li>Maintains pressure and anxiety to extract money.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>6.3 Other Common Phone/Voice Scam Red Flags</h3>
       <ul>
         <li>Spoofed caller IDs (e.g., '+60 03 8888 9999').</li>
@@ -611,7 +621,7 @@ const phishingTheory = (
         <li>Requests for untraceable payment methods.</li>
         <li>No verifiable details like case number or paperwork.</li>
       </ul>
-      <p></p>
+      <div style={{ height: "0.5em" }} />
       <h3>6.4 Best Practices to Avoid Vishing Scams</h3>
       <ul>
         <li>Hang up and call official hotline numbers.</li>
@@ -620,7 +630,7 @@ const phishingTheory = (
         <li>Use call-blocking and report scams to authorities.</li>
       </ul>
     </section>
-    <p></p>
+    <br />
     {/* Section 7 */}
     <section className="course-section">
       <h2>7. Key Takeaways & Core Learning Objectives</h2>
@@ -640,6 +650,7 @@ const phishingTheory2_0 = (
   <div>
     <section className="course-section">
   <h2>1. Job Offer or Internship Scam</h2>
+  <div style={{ height: "0.5em" }} />
   <h3>1.1 How Phishers Exploit Career Ambitions</h3>
   <ul>
     <li><b>Too-Good-To-Be-True Offers</b>
@@ -655,7 +666,7 @@ const phishingTheory2_0 = (
       </ul>
     </li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.2 Recognizing a Fake Job Offer</h3>
   <ul>
     <li><b>Lack of Proper Interview Process</b>
@@ -671,7 +682,7 @@ const phishingTheory2_0 = (
       </ul>
     </li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.3 Play on Urgency and Opportunity</h3>
   <ul>
     <li><b>False Sense of Exclusivity</b>
@@ -681,7 +692,7 @@ const phishingTheory2_0 = (
       </ul>
     </li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.4 Best Practices When Receiving Job Offers Online</h3>
   <ul>
     <li>Research the company and job posting independently via their official site.</li>
@@ -690,9 +701,10 @@ const phishingTheory2_0 = (
     <li>Report suspicious offers to campus career centers or authorities.</li>
   </ul>
 </section>
-<p></p>
+<br />
 <section className="course-section">
   <h2>2. Tech Support Scam</h2>
+  <div style={{ height: "0.5em" }} />
   <h3>2.1 How Scammers Impersonate IT Help</h3>
   <ul>
     <li><b>Fake Virus Alerts</b>
@@ -708,20 +720,20 @@ const phishingTheory2_0 = (
       </ul>
     </li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>2.2 Why Technical Jargon Can Be Misleading</h3>
   <ul>
     <li>Scammers use terms like “IP conflict,” “driver failure,” or “registry error.”</li>
     <li>Designed to sound convincing, even though the user may not understand them.</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>2.3 Common Signs of a Tech Support Scam</h3>
   <ul>
     <li>Unsolicited messages or calls claiming system issues.</li>
     <li>Promises to “fix everything remotely” for a fee.</li>
     <li>Scammers may show fake diagnostics or logs.</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>2.4 Best Practices Against Tech Support Scams</h3>
   <ul>
     <li>Close the browser tab or restart the device—don’t call any number shown in a pop-up.</li>
@@ -730,9 +742,10 @@ const phishingTheory2_0 = (
     <li>Use browser pop-up blockers and antivirus software.</li>
   </ul>
 </section>
-<p></p>
+<br />
 <section className="course-section">
   <h2>3. Online Marketplace Scams</h2>
+  <div style={{ height: "0.5em" }} />
   <h3>3.1 Common Buyer & Seller Traps</h3>
   <ul>
     <li><b>Fake Buyer Scenarios</b>
@@ -748,14 +761,14 @@ const phishingTheory2_0 = (
       </ul>
     </li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>3.2 Red Flags in Online Transactions</h3>
   <ul>
     <li>No in-platform communication—scammers request to “chat on WhatsApp.”</li>
     <li>Avoids using platforms with built-in buyer/seller protection.</li>
     <li>Unusual urgency (“first come, first serve!”).</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>3.3 Best Practices for Safe Online Buying/Selling</h3>
   <ul>
     <li>Always use marketplace apps with payment protection (e.g., Shopee, Lazada, Carousell).</li>
@@ -764,7 +777,7 @@ const phishingTheory2_0 = (
     <li>Verify buyer/seller profiles and reviews before transactions.</li>
   </ul>
 </section>
-<p></p>
+<br />
 <section className="course-section">
   <h2>4. Social Media Phishing via Fake Giveaways</h2>
   <h3>4.1 How Social Platforms Are Abused</h3>
@@ -772,19 +785,19 @@ const phishingTheory2_0 = (
     <li>Fake Instagram pages mimic real brands (e.g., Watsons, Uniqlo).</li>
     <li>Require users to “click the link in bio” to win prizes.</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>4.2 Lure of Free Items and Engagement Bait</h3>
   <ul>
     <li>“Like, share, and comment to win an iPhone!”</li>
     <li>Scammers use engagement to gain credibility and spread reach.</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>4.3 Real vs Fake Giveaways</h3>
   <ul>
     <li>Real giveaways are announced on official verified pages.</li>
     <li>Scammers use newly made accounts with few followers or odd handles.</li>
   </ul>
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>4.4 Best Practices on Social Media Giveaways</h3>
   <ul>
     <li>Confirm giveaways on official websites or verified pages.</li>
@@ -792,7 +805,7 @@ const phishingTheory2_0 = (
     <li>Report fake pages to platform moderators.</li>
   </ul>
 </section>
-<p></p>
+<br />
 <section className="course-section">
   <h2>5. Key Takeaways & Core Learning Objectives</h2>
   <ul>
@@ -812,7 +825,7 @@ const passwordAwarenessTheory = (
     {/* Section 1 */}
 <section className="course-section">
   <h2>1. What Makes a Strong Password?</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>1.1. Characteristics of a Strong Password</h3>
   <ul>
     <li><b>Length:</b> At least 12 characters; longer passwords are harder to crack.</li>
@@ -829,7 +842,7 @@ const passwordAwarenessTheory = (
       </ul>
     </li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>1.2. Comparing Password Examples</h3>
   <ul>
     <li><b>“12345678”:</b> Very weak – sequential and common.</li>
@@ -837,7 +850,7 @@ const passwordAwarenessTheory = (
     <li><b>“John2005”:</b> Weak – uses name and birth year; easy to guess.</li>
     <li><b>“G!v3M3$3cur1ty!”:</b> Strong – 15 characters, complex, and unpredictable.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>1.3. What to Avoid When Creating a Password</h3>
   <ul>
     <li><b>Avoid personal information:</b> Names, birthdates, pet names.</li>
@@ -845,18 +858,18 @@ const passwordAwarenessTheory = (
     <li><b>Avoid common substitutions:</b> Like “0” for “o” or “@” for “a”.</li>
   </ul>
 </section>
-<p></p>
+<br />
 {/* Section 2 */}
 <section className="course-section">
   <h2>2. Risk of Reusing the Same Password</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>2.1. Credential Stuffing Explained</h3>
   <ul>
     <li>Hackers use stolen credentials from one site on others.</li>
     <li>One weak link can give attackers access to multiple accounts.</li>
     <li>If “MyPassword!23” is reused and one site is breached, all sites are at risk.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>2.2. Best Practice: Use Unique Passwords</h3>
   <ul>
     <li>Each account should have its own password.</li>
@@ -864,26 +877,25 @@ const passwordAwarenessTheory = (
     <li>Change passwords immediately if a service you use is breached.</li>
   </ul>
 </section>
-
-<p></p>
+<br />
 {/* Section 3 */}
 <section className="course-section">
   <h2>3. Understanding Two-Factor Authentication (2FA)</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>3.1. Types of Authentication Factors</h3>
   <ul>
     <li><b>Something You Know:</b> Passwords, PINs.</li>
     <li><b>Something You Have:</b> Authenticator app, SMS code, security key.</li>
     <li><b>Something You Are:</b> Biometric data – fingerprint, facial scan.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>3.2. How 2FA Works</h3>
   <ul>
     <li>Step 1: Enter your password.</li>
     <li>Step 2: Verify with a second factor (e.g., SMS code or app code).</li>
     <li>Login is successful only if both steps are completed.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>3.3. Benefits of 2FA</h3>
   <ul>
     <li>Protects against phishing and keylogging.</li>
@@ -891,17 +903,17 @@ const passwordAwarenessTheory = (
     <li>Prevents unauthorized logins even if your password is stolen.</li>
   </ul>
 </section>
-<p></p>
+      <br />
 {/* Section 4 */}
 <section className="course-section">
   <h2>4. What to Avoid When Creating a Password</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>4.1. Personal Information is Predictable</h3>
   <ul>
     <li>Birthdates, names, anniversaries are easy to find or guess.</li>
     <li>Attackers use social media and public records to find clues.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>4.2. Avoid Weak Patterns</h3>
   <ul>
     <li>No names, pet names, or personal facts in passwords.</li>
@@ -909,56 +921,56 @@ const passwordAwarenessTheory = (
     <li>Use a random generator instead of manually created passwords.</li>
   </ul>
 </section>
-<p></p>
+<br />
 {/* Section 5 */}
 <section className="course-section">
   <h2>5. How Often to Change Your Password</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>5.1. Recommended Frequency</h3>
   <ul>
     <li><b>Every 6–12 months</b> for important accounts (email, banking, work).</li>
     <li>Less frequently for low-risk accounts, but review annually.</li>
     <li>Avoid daily changes — leads to weak, predictable patterns.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>5.2. Change Passwords Immediately If:</h3>
   <ul>
     <li>A service you use is breached.</li>
     <li>You notice suspicious login activity.</li>
     <li>Your device is lost or stolen.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>5.3. Best Practice</h3>
   <ul>
     <li>Keep recovery methods updated (email and phone number).</li>
     <li>Use unique passwords for every account to avoid mass compromise.</li>
   </ul>
 </section>
-<p></p>
+<br />
 {/* Section 6 */}
 <section className="course-section">
   <h2>6. Understanding Password Managers</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>6.1. Why Use One?</h3>
   <ul>
     <li>Humans can’t remember 20+ unique, complex passwords.</li>
     <li>Password managers generate and store secure passwords for every site.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>6.2. How They Work</h3>
   <ul>
     <li><b>Master Password:</b> One strong password unlocks your vault.</li>
     <li><b>Vault & Encryption:</b> Data is encrypted and secure.</li>
     <li><b>Auto-fill & Save:</b> Automatically fills in credentials on websites.</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} />
   <h3>6.3. Examples of Password Managers</h3>
   <ul>
     <li>Bitwarden (free, open source)</li>
     <li>1Password, Dashlane, LastPass</li>
     <li>KeePass (local, offline, technical setup)</li>
   </ul>
-
+  <div style={{ height: "0.5em" }} /> 
   <h3>6.4. Benefits</h3>
   <ul>
     <li>Only need to remember one password.</li>
@@ -967,7 +979,7 @@ const passwordAwarenessTheory = (
     <li>Syncs across devices with extensions and mobile apps.</li>
   </ul>
 </section>
-<p></p>
+<br />
 {/* Section 7 */}
 <section className="course-section">
   <h2>7. Core Learning Objectives</h2>
@@ -989,7 +1001,7 @@ const authenticationTheory = (
     {/* Section 1 */}
 <section className="course-section">
   <h2>1. Authentication Methods to Avoid Cyber Threats</h2>
-
+  <div style={{ height: "0.5em" }} />
   <h3>1.1. Understanding Authentication Factors</h3>
   <ul>
     <li><b>Something Only You Should Know (Knowledge Factor)</b>
@@ -1014,8 +1026,7 @@ const authenticationTheory = (
       </ul>
     </li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.2. Multi-Factor Authentication (MFA): Your Strongest Defense</h3>
   <ul>
     <li>MFA = using two or more factors (e.g., password + OTP)</li>
@@ -1023,8 +1034,7 @@ const authenticationTheory = (
     <li>Even if your password is leaked, hackers can't access without the second factor</li>
     <li>Use it for: Banking, Gmail, social media, cloud storage, university accounts</li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.3. Stronger Alternatives to Traditional Passwords</h3>
   <ul>
     <li><b>Passkeys:</b>
@@ -1049,8 +1059,7 @@ const authenticationTheory = (
       </ul>
     </li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.4. Authentication Mistakes to Avoid</h3>
   <ul>
     <li><b>Don't reuse the same password</b> across multiple accounts</li>
@@ -1058,8 +1067,7 @@ const authenticationTheory = (
     <li><b>Don't ignore login alerts</b> – review unknown logins immediately</li>
     <li><b>Don’t store passwords in plain text</b> – use a password manager</li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.5. Best Practices for Safe Authentication</h3>
   <ul>
     <li>Use a mix of authentication factors (password + device + biometrics)</li>
@@ -1068,8 +1076,7 @@ const authenticationTheory = (
     <li>Back up recovery codes for authenticator apps</li>
     <li>Regularly audit active sessions and devices from your account settings</li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h3>1.6. Real-World Example: Securing a University Email</h3>
   <ul>
     <li><b>Scenario:</b> UM student receives a fake email asking to log in to their UM mail</li>
@@ -1077,8 +1084,7 @@ const authenticationTheory = (
     <li><b>With MFA:</b> Attack fails – phisher can’t get the code from authenticator app</li>
     <li><b>Lesson:</b> One extra layer can block serious account compromise</li>
   </ul>
-
-  <p></p>
+  <div style={{ height: "0.5em" }} />
   <h2>2. Key Takeaways & Core Learning Objectives</h2>
   <ul>
     <li>Understand different types of authentication factors</li>
@@ -1088,7 +1094,7 @@ const authenticationTheory = (
     <li>Apply safe authentication habits in academic and personal digital accounts</li>
   </ul>
 </section>
-
+<br />
 
   </div>
 );

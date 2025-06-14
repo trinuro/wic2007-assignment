@@ -1,3 +1,5 @@
+# Group Member:
+- Ong Kai Yin, Teh Liang Chen, Yeaw Jia Ming, Khiew Zhi Jie, Titus Tan Yu Fan
 # Basic setup
 1. git clone the repo 
 ```cmd

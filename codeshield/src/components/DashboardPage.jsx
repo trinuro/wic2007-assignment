@@ -11,14 +11,14 @@ const modules = [
   },
   {
     id: 2,
-    title: "Phishing",
+    title: "Phishing is everywhere",
     //description: "Learn to identify and protect yourself from phishing attempts, scams, and social engineering attacks that try to steal your personal information.",
     icon: "🎣",
     difficulty: "Intermediate"
   },
   {
     id: 3,
-    title: "Authentication",
+    title: "Authentication is the key",
     //description: "Learn to create and manage strong, understand why reuse is dangerous, and use password managers to safeguard your personal information.",
     icon: "🔑",
     difficulty: "Advanced",

@@ -1,0 +1,61 @@
+name: build-deploy
+on: 
+  workflow_dispatch
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    default:
+      runs:
+        working-directory: ./codeshield
+    steps: 
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: npm run build 
+  
+  deploy:
+    needs: build
+    default:
+      runs:
+        working-directory: ./codeshield
+    # Define permissions
+    permissions:
+      contents: write # allows the action to create a release
+      pages: write # permits action to request a GH Pages build
+      id-token: write # get oidc token
+    # Define target environment
+    environment:
+      name: production
+      # deployment is the id of the last job ("deploy")
+      url: ${{steps.deployment.outputs.page_url}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access repo code
+        uses: actions/checkout@v3
+        with: 
+          # we need this argument to authenticate as we want write access
+          token: ${{secrets.GITHUB_TOKEN}} 
+      - name: Set up node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'
+      - name: Configure github pages
+        uses: actions/configure-pages@v3
+      - run: npm ci 
+      # build the server
+      - run: npm run build
+      # store the artifact (built website) because we want the static site
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # specify path of directory containing static pages
+          path: "./out"
+      # deploy to GH pages
+      - name: deploy 
+        # specify A unique identifier for the step
+        id: deployment
+        uses: actions/deploy-pages@v4
